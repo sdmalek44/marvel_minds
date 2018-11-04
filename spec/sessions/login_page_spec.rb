@@ -30,9 +30,9 @@ describe 'visit /login' do
 
       fill_in :username, with: user.username
       fill_in :password, with: 'candy'
-      click_on 'Sign In'
+      click_on 'SIGN IN'
 
-      expect(current_path).to be('/')
+      expect(current_path).to eq('/')
       expect(page).to have_content('Successfully Signed In!')
     end
   end
