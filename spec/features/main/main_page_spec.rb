@@ -26,5 +26,13 @@ describe '/' do
 
       expect(current_path).to eq('/series')
     end
+    it 'can click on favorites if not logged in' do
+      visit '/'
+
+      expect(page).to have_link("FAVORITES")
+      click_link 'FAVORITES'
+
+      expect(current_path).to eq('/login')
+    end
   end
 end
