@@ -3,9 +3,9 @@ rvm:
   - 2.4.3
 env:
   - DB=postgresql
+  - MARVEL_MINDS_PASSWORD=stephen
+
 before_script:
-  - cp config/database.travis.yml config/database.yml
-  - psql -c 'create database marvel_minds_test;' -U postgres
   - bundle exec rake db:create --all
   - bundle exec rake db:migrate
 script:
