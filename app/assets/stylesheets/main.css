@@ -10,6 +10,11 @@ body {
   margin: 0px;
 }
 
+.logout-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
 .title-banner {
   padding-top: 10px;
   background-color: rgb(188, 27, 18);
@@ -39,6 +44,12 @@ body {
   background-image: url('https://lumiere-a.akamaihd.net/v1/images/featuredvideo_avengersageofultron_background_a77b245f.jpeg?region=0,0,1024,385');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.logout-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-banner {
@@ -86,8 +97,8 @@ body {
   background-image: url('marvel-characters.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.95
-
+  opacity: 0.95;
+  flex-shrink: 3;
 }
 
 #series-pic {
@@ -96,11 +107,13 @@ body {
   background-position: center;
   opacity: 0.95;
   color: white;
+  flex-shrink: 3;
 }
 
 .bottom-cent {
   height: 40%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -123,5 +136,5 @@ body {
   opacity: 0.95;
   font-family: 'Anton', sans-serif;
   text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
-
+  flex-shrink: 3;
 }

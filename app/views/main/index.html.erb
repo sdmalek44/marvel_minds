@@ -7,9 +7,15 @@
 
     </header>
     <section class="middle-banner">
-      <div class="desc">
-        Learn about Marvel comic book characters and series in a fun way!
-      </div>
+      <% if current_user %>
+        <div class="logout-banner">
+          <a class="desc logout-link" href="/logout">Sign Out</a>
+        </div>
+      <% else %>
+        <div class="desc">
+          Learn about Marvel comic book characters and series in a fun way!
+        </div>
+      <% end %>
       <article class="middle-body">
         <section class="cent-mid-body">
           <article class="top-cent">
@@ -17,7 +23,12 @@
             <a class="button-fat" id="series-pic" href="/series" ><div>SERIES</div></a>
           </article>
           <article class="bottom-cent">
-            <a href="" id="log-to-fav" class="button-flat"><div>FAVORITES</div></a>
+            <% if current_user %>
+              <a href="/favorites" id="log-to-fav" class="button-flat"><div>FAVORITES</div></a>
+            <% else %>
+              <a href="/login" id="log-to-fav" class="button-flat"><div>FAVORITES</div></a>
+            <% end %>
+            <div class="desc"><%= flash[:notice] if flash[:notice]%></div>
           </article>
         </section>
 

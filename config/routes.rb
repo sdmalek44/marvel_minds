@@ -3,4 +3,9 @@ Rails.application.routes.draw do
 
   resources :characters, only: [:index]
   resources :series, only: [:index]
+  resources :favorites, only: [:index]
+  resources :users, only: [:new, :create]
+
+  get "/login", to: "sessions#new"
+  get "/logout", to: "sessions#destroy"
 end

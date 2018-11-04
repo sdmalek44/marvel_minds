@@ -1,0 +1,9 @@
+
+
+<%= form_tag('/users', method: :post)  do -%>
+  <%= label_tag 'Username' %>
+  <%= text_field_tag :username %>
+  <%= label_tag 'Password' %>
+  <%= text_field_tag :password %>
+  <%= submit_tag 'CREATE ACCOUNT' %>
+<% end -%>

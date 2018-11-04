@@ -2,8 +2,9 @@ language: ruby
 rvm:
   - 2.4.3
 env:
-  - DB=postgresql
+
 before_script:
+  - psql -c "create role marvel_minds with createdb login password 'stephen';" -U postgres
   - bundle exec rake db:create --all
   - bundle exec rake db:migrate
 script:
