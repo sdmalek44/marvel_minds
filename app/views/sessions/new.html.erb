@@ -1,1 +1,24 @@
-<a href="/users/new">CREATE ACCOUNT</a>
+<header class="title-banner">
+  <div class="title">SIGN IN FOR FAVORITES</div>
+
+</header>
+<section class="middle-banner">
+  <article class="middle-body">
+    <section class="cent-mid-body flex-col">
+      <div class="desc">
+        Don't have a username? click CREATE ACCOUNT
+      </div>
+    <%= form_tag('/login', method: :post, class: 'form-card')  do %>
+      <%= label_tag 'username', 'USERNAME', class: 'label' %>
+      <%= text_field_tag :username, nil, class: 'label field' %>
+      <%= label_tag 'password', 'PASSWORD', class: 'label' %>
+      <%= password_field_tag :password, nil, class: 'label field' %>
+      <%= submit_tag 'SIGN IN', class: 'label submit green' %>
+      <div class="desc">OR</div>
+      <a href="/users/new" class="label no-dec submit red">CREATE ACCOUNT</a>
+    <% end %>
+    <a href="/" class="no-dec return-home">BACK TO MAIN PAGE</a>
+    <div class="desc"><%= flash[:notice] if flash[:notice]%></div>
+    </section>
+  </article>
+</section>

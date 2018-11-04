@@ -1,9 +1,24 @@
+<header class="title-banner">
+    <div class="title">CREATE NEW ACCOUNT</div>
 
-
-<%= form_tag('/users', method: :post)  do -%>
-  <%= label_tag 'Username' %>
-  <%= text_field_tag :username %>
-  <%= label_tag 'Password' %>
-  <%= text_field_tag :password %>
-  <%= submit_tag 'CREATE ACCOUNT' %>
-<% end -%>
+</header>
+<section class="middle-banner">
+  <article class="middle-body">
+    <section class="cent-mid-body flex-col">
+      <div class="desc">
+        Already have a username? click SIGN IN
+      </div>
+    <%= form_tag('/users', method: :post, class: 'form-card')  do %>
+      <%= label_tag 'username', 'USERNAME', class: 'label' %>
+      <%= text_field_tag :username, nil, class: 'label field' %>
+      <%= label_tag 'password', 'PASSWORD', class: 'label' %>
+      <%= password_field_tag :password, nil, class: 'label field' %>
+      <%= submit_tag 'CREATE ACCOUNT', class: 'label submit green' %>
+      <div class="desc">OR</div>
+      <a href="/login" class="label no-dec submit red">SIGN IN</a>
+    <% end %>
+    <a href="/" class="no-dec return-home">BACK TO MAIN PAGE</a>
+    <div class="desc"><%= flash[:notice] if flash[:notice]%></div>
+    </section>
+  </article>
+</section>
