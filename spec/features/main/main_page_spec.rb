@@ -10,5 +10,13 @@ describe '/' do
       expect(page).to have_content("MARVEL MINDS")
       expect(page).to have_content(desc)
     end
+    it 'can click to visit characters' do
+      visit '/'
+
+      expect(page).to have_link("CHARACTERS")
+      click_link 'CHARACTERS'
+
+      expect(current_path).to eq('/characters')
+    end
   end
 end
