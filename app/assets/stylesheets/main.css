@@ -10,6 +10,11 @@ body {
   margin: 0px;
 }
 
+.logout-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
 .title-banner {
   padding-top: 10px;
   background-color: rgb(188, 27, 18);
@@ -39,6 +44,12 @@ body {
   background-image: url('https://lumiere-a.akamaihd.net/v1/images/featuredvideo_avengersageofultron_background_a77b245f.jpeg?region=0,0,1024,385');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.logout-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-banner {
@@ -101,6 +112,7 @@ body {
 .bottom-cent {
   height: 40%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 

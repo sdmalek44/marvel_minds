@@ -15,6 +15,7 @@ describe 'visit /login' do
       click_on 'CREATE ACCOUNT'
 
       expect(current_path).to eq('/')
+      expect(page).to have_content('Sign Out')
       expect(page).to have_content('Successfully Signed in!')
     end
   end
