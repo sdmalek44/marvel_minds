@@ -13,9 +13,9 @@ body {
 .title-banner {
   padding-top: 10px;
   background-color: rgb(188, 27, 18);
-  color: rgb(250,250,250, 0.98);
+  color: rgb(250,250,250);
   height: 12em;
-  border: 4px solid rgb(48, 41, 41, 0.1);
+  border: 4px solid rgb(188, 41, 41);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +25,7 @@ body {
 
 .desc {
   width: 100%;
-  height: 50px;
+  height: 8%;
   color: white;
   text-align: center;
   font-size: 30px;
@@ -43,4 +43,85 @@ body {
 
 .footer-banner {
   height: 100%;
+}
+
+.middle-body {
+  height: 85%;
+  display: flex;
+  justify-content: center;
+}
+
+.cent-mid-body {
+  height: 100%;
+  width: 80%;
+}
+
+.top-cent {
+  height: 48%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-fat {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 40%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 45px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 90px;
+  text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+
+}
+
+#chars-pic {
+  background-image: url('marvel-characters.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.95
+
+}
+
+#series-pic {
+  background-image: url('marvel-series-crop.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.95;
+  color: white;
+}
+
+.bottom-cent {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.button-flat {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  width: 60%;
+  border-radius: 45px;
+  color: white;
+  font-size: 90px;
+  text-decoration: none;
+  text-align: center;
+  background-image: url('marvel-favorites.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.95;
+  font-family: 'Anton', sans-serif;
+  text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+
 }
