@@ -3,7 +3,6 @@ rvm:
   - 2.4.3
 env:
   - DB=postgresql
-  - MARVEL_MINDS_PASSWORD=stephen
 
 before_script:
   - psql -c "CREATE USER marvel_minds WITH PASSWORD 'stephen';" -U postgres
