@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     user = User.create(user_params)
     if user.save
       flash[:notice] = 'Successfully Signed in!'
+      session[:user_id] = user.id
       redirect_to '/'
     else
       flash[:notice] = 'Username Already Exists'
