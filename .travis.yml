@@ -2,7 +2,6 @@ language: ruby
 rvm:
   - 2.4.3
 env:
-  - DB=postgresql
 
 before_script:
   - psql -c "CREATE USER marvel_minds WITH PASSWORD 'stephen';" -U postgres
