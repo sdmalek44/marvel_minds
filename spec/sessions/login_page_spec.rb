@@ -16,7 +16,12 @@ describe 'visit /login' do
 
       expect(current_path).to eq('/')
       expect(page).to have_content('Sign Out')
-      expect(page).to have_content('Successfully Signed in!')
+      expect(page).to have_content('Successfully Created Account!')
+
+      click_on 'Sign Out'
+
+      expect(page).to have_content('Successfully Signed Out!')
+      expect(current_path).to eq('/')
     end
   end
 end
