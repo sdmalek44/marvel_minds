@@ -34,5 +34,13 @@ describe '/' do
 
       expect(current_path).to eq('/login')
     end
+    it 'can click on favorites if logged in' do
+      user = create(:user)
+      expect_any_instance_of(ApplicationController).to recieve(:current_user).and_return(user)
+      visit '/'
+      click_link 'FAVORITES'
+
+      expect(current_path).to eq('/favorites')
+    end
   end
 end
