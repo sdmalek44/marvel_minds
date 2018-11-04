@@ -23,5 +23,17 @@ describe 'visit /login' do
       expect(page).to have_content('Successfully Signed Out!')
       expect(current_path).to eq('/')
     end
+    it 'can enter info to log in if they have account' do
+      user = create(:user, {password: 'candy'})
+
+      visit '/login'
+
+      fill_in :username, with: user.username
+      fill_in :password, with: 'candy'
+      click_on 'Sign In'
+
+      expect(current_path).to be('/')
+      expect(page).to have_content('Successfully Signed In!')
+    end
   end
 end
