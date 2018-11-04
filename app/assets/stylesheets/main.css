@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  height: 100%;
+  background-color: rgb(188, 27, 18);
+}
+
+.title {
+  font-size: 100px;
+  font-family: 'Anton', sans-serif;
+  margin: 0px;
+}
+
+.title-banner {
+  padding-top: 10px;
+  background-color: rgb(188, 27, 18);
+  color: rgb(250,250,250, 0.98);
+  height: 12em;
+  border: 4px solid rgb(48, 41, 41, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.desc {
+  width: 100%;
+  height: 50px;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  padding: 15px;
+  font-family: 'Merriweather Sans', sans-serif;
+
+}
+
+.middle-banner {
+  height: 45em;
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/featuredvideo_avengersageofultron_background_a77b245f.jpeg?region=0,0,1024,385');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-banner {
+  height: 100%;
+}
