@@ -18,5 +18,13 @@ describe '/' do
 
       expect(current_path).to eq('/characters')
     end
+    it 'can click to visit series' do
+      visit '/'
+
+      expect(page).to have_link("SERIES")
+      click_link 'SERIES'
+
+      expect(current_path).to eq('/series')
+    end
   end
 end
