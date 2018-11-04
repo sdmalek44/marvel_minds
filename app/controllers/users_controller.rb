@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
-      flash[:notice] = 'Username Already Exists'
+      flash[:notice] = 'Username Invalid or Already Exists!'
       render :new
     end
   end

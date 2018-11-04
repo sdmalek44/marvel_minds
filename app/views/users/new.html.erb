@@ -7,3 +7,4 @@
   <%= text_field_tag :password %>
   <%= submit_tag 'CREATE ACCOUNT' %>
 <% end -%>
+<div class="desc"><%= flash[:notice] if flash[:notice]%></div>

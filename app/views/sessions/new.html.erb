@@ -1,9 +1,10 @@
 <a href="/users/new">CREATE ACCOUNT</a>
 
-<%= form_tag('/sessions', method: :post)  do -%>
+<%= form_tag('/login', method: :post)  do -%>
   <%= label_tag 'Username' %>
   <%= text_field_tag :username %>
   <%= label_tag 'Password' %>
   <%= text_field_tag :password %>
   <%= submit_tag 'SIGN IN' %>
 <% end -%>
+<div class="desc"><%= flash[:notice] if flash[:notice]%></div>
