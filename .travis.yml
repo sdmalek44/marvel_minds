@@ -6,6 +6,7 @@ env:
   - MARVEL_MINDS_PASSWORD=stephen
 
 before_script:
+  - psql -c "CREATE USER marvel_minds WITH PASSWORD 'stephen';" -U postgres
   - bundle exec rake db:create --all
   - bundle exec rake db:migrate
 script:
