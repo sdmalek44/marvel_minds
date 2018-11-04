@@ -97,8 +97,8 @@ body {
   background-image: url('marvel-characters.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.95
-
+  opacity: 0.95;
+  flex-shrink: 3;
 }
 
 #series-pic {
@@ -107,6 +107,7 @@ body {
   background-position: center;
   opacity: 0.95;
   color: white;
+  flex-shrink: 3;
 }
 
 .bottom-cent {
@@ -135,5 +136,5 @@ body {
   opacity: 0.95;
   font-family: 'Anton', sans-serif;
   text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
-
+  flex-shrink: 3;
 }

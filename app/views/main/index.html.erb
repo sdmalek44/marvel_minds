@@ -28,7 +28,7 @@
             <% else %>
               <a href="/login" id="log-to-fav" class="button-flat"><div>FAVORITES</div></a>
             <% end %>
-            <%= flash[:notice] if flash[:notice]%>
+            <div class="desc"><%= flash[:notice] if flash[:notice]%></div>
           </article>
         </section>
 
