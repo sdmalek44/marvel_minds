@@ -1,7 +1,11 @@
 class CharactersController < ApplicationController
 
   def index
-    @presenter = presenter
+    @presenter = index_presenter
+  end
+
+  def show
+    
   end
 
   private
@@ -10,7 +14,7 @@ class CharactersController < ApplicationController
     params.permit(:query)
   end
 
-  def presenter
+  def index_presenter
     return CharacterPresenter.new unless params[:query]
     CharacterPresenter.new(search_params[:query])
   end
