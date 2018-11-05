@@ -2,10 +2,10 @@
     <div class="title">MARVEL CHARACTERS</div>
 </header>
 <section class="middle-banner">
-  <article class="middle-body border">
+  <article class="middle-body mb">
     <%= render partial: "layouts/nav" %>
     <section class="lower-sec">
-      <aside class="left-sec">
+      <aside class="left-sec mt-20">
         <form class="calculator" action="/characters" method="get">
           <div class="calc-title">SEARCH BY NAME</div>
           <input id="cal-input" class="calc-input" type="text" name="character[query]" placeholder="CHARACTER NAME">
@@ -15,22 +15,25 @@
           <input type="submit" value="SEARCH" class="calc-input sub-button red" >
         </form>
       </aside>
-      <aside class="mid-sec">
+      <aside class="mid-sec mt-20">
         <div class="result-t"><div class="result-title">CHARACTER SEARCH RESULTS</div></div>
         <div class="result-box">
           <% if @presenter %>
             <% @presenter.characters.each do |character| %>
-              <article class="">
-                <div>Name: <%= character.name %></div>
-                <div>Description: <%= character.description %></div>
-                <div>Series: <%= character.series_count %></div>
-                <div>Events: <%= character.events_count %></div>  
+              <article class="hero-card">
+                <img src="<%= character.thumbnail %>" alt="" class="thumb-img">
+                <aside class="hero-card-right">
+                  <div><span class="ul">Name</span>: <span class="hero-name"><%= character.name %></span></div>
+                  <div><span class="ul">Description</span>: <%= character.description %></div>
+                  <div><span class="ul">Series</span>: <%= character.series_count %></div>
+                  <div><span class="ul">Events</span>: <%= character.events_count %></div>
+                </aside>
               </article>
             <% end %>
           <% end %>
         </div>
       </aside>
-      <aside class="right-sec">
+      <aside class="right-sec mt-20">
 
       </aside>
     </section>
