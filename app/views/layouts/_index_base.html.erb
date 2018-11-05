@@ -1,0 +1,40 @@
+<header class="title-banner">
+    <div class="title"><%= @presenter.title %></div>
+</header>
+<section class="middle-banner">
+  <article class="middle-body mb">
+    <%= render partial: "layouts/nav" %>
+    <section class="lower-sec">
+      <aside class="left-sec mt-20">
+        <form class="calculator" action="<%= @presenter.search_path %>" method="get">
+          <div class="calc-title"><%= @presenter.search_title %></div>
+          <input id="cal-input" class="calc-input" type="text" name="query" placeholder="CHARACTER NAME">
+          <div id="calc-buttons" class="calc-buttons">
+          </div>
+          <input type="submit" value="SEARCH" class="calc-input sub-button red" >
+        </form>
+      </aside>
+      <aside class="mid-sec mt-20">
+        <div class="result-t"><div class="result-title"><%= @presenter.search_results %></div></div>
+        <div class="result-box">
+          <%= render partial: 'attributes_partial'  %>
+        </div>
+      </aside>
+      <aside class="right-sec mt-20">
+        <%= render partial: "layouts/popular_characters" %>
+    </section>
+  </article>
+</section>
+<script type="text/javascript">
+  var search_path = <%= @presenter.search_path %>
+  window.onload = function() {
+    var charA = "A"
+    var charZ = "Z"
+    var pad = $('#calc-buttons')
+    var a = [], i = charA.charCodeAt(0), j = charZ.charCodeAt(0);
+    for (; i <= j; ++i) {
+      var char = String.fromCharCode(i)
+      pad.append(`<a href="${ search_path }?query=${char}" class="calc-letter">${char}</a>`);
+    }
+  }
+</script>

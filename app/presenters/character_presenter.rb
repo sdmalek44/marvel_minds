@@ -1,9 +1,25 @@
 class CharacterPresenter
-  def initialize(search_query)
+  def initialize(search_query = "")
     @query = search_query
   end
 
-  def characters
+  def title
+    "MARVEL CHARACTERS"
+  end
+
+  def search_title
+    "SEARCH BY NAME"
+  end
+
+  def search_path
+    "/characters"
+  end
+
+  def search_results
+    "CHARACTER SEARCH RESULTS"
+  end
+
+  def search_results
     return [] if @query.empty?
     search_characters.map do |raw_character|
       Character.new(raw_character)
