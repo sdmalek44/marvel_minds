@@ -9,8 +9,7 @@
         <form class="calculator" action="/characters" method="get">
           <div class="calc-title">SEARCH BY NAME</div>
           <input id="cal-input" class="calc-input" type="text" name="query" placeholder="CHARACTER NAME">
-          <div class="calc-buttons">
-            <a href="/characters?query=A" class="calc-letter">A</a>
+          <div id="calc-buttons" class="calc-buttons">
           </div>
           <input type="submit" value="SEARCH" class="calc-input sub-button red" >
         </form>
@@ -49,3 +48,15 @@
     </section>
   </article>
 </section>
+<script type="text/javascript">
+  window.onload = function() {
+    var charA = "A"
+    var charZ = "Z"
+    var pad = $('#calc-buttons')
+    var a = [], i = charA.charCodeAt(0), j = charZ.charCodeAt(0);
+    for (; i <= j; ++i) {
+      var char = String.fromCharCode(i)
+      pad.append(`<a href="/characters?query=${char}" class="calc-letter">${char}</a>`);
+    }
+  }
+</script>
