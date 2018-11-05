@@ -12,5 +12,19 @@ describe '/characters' do
       expect(page).to have_link('FAVORITES')
       expect(page).to have_link('SIGN IN')
     end
+    it 'can search by input field' do
+      visit '/characters'
+
+      fill_in 'cal-input', with: 'Hulk'
+
+      click_on 'SEARCH'
+
+      desc = "Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets."
+
+      expect(page).to have_content('Name: Hulk')
+      expect(page).to have_content("Description: #{desc}")
+      expect(page).to have_content("Series: 419")
+      expect(page).to have_content("Events: 25")
+    end
   end
 end

@@ -1,0 +1,177 @@
+.mt-20 {
+  margin-top: 30px;
+}
+
+.mb {
+  display: flex;
+  flex-direction: column;
+}
+
+.lower-sec {
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.left-sec {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid-sec {
+  width:50%;
+}
+
+.right-sec {
+  width:25%;
+}
+
+.calculator {
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-family: 'Merriweather Sans', sans-serif;
+  background-color: rgb(73, 75, 91);
+  width: 80%;
+  height: 99%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px 2px 2px 2px;
+}
+
+.calc-buttons {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 50%;
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calc-letter {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: rgb(244, 17, 4);
+  text-decoration: none;
+  padding: 5px;
+  height: 10%;
+  width: 10%;
+  margin-left: 5px;
+  border: 1px solid black;
+  background-color: rgb(48, 48, 48);
+}
+
+.calc-input {
+  width: 80%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  height: 5%;
+  border: 2px solid black;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.sub-button {
+  height: 7%;
+  font-size: 20px;
+  color: white;
+}
+
+.calc-title {
+  font-size: 25px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.result-title {
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+
+  font-size: 30px;
+  color: white;
+  font-family: 'Merriweather Sans', sans-serif;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px 2px 2px 2px black;
+  border-radius: 25px;
+  background-color: rgb(73, 75, 91);
+}
+
+.result-t {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.result-box {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.hero-card {
+  border: 4px solid rgb(244, 17, 4);
+  display: flex;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  background-color: rgb(0, 0, 0);
+  width: 95%;
+}
+
+.thumb-img {
+  border-top-left-radius: 27px;
+  border-bottom-left-radius: 27px;
+}
+
+.hero-card-right {
+  width: 98%;
+  color: rgb(206, 206, 206);
+  font-family: 'Special Elite', cursive;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 7px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.hero-name {
+  font-size: 23px;
+}
+
+.ul {
+  text-decoration: underline;
+}
+
+.list {
+  color: white;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 25px;
+  width: 80%;
+  height: 90%;
+  background-color: rgb(73, 75, 91);
+  padding-top: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 2px black;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+
+}
+
+.item {
+  margin-left: 15px;
+}
+
+.list-title {
+}
