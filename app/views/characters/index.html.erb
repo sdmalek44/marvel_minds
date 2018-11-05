@@ -6,9 +6,9 @@
     <%= render partial: "layouts/nav" %>
     <section class="lower-sec">
       <aside class="left-sec">
-        <form class="calculator">
+        <form class="calculator" action="/characters" method="get">
           <div class="calc-title">SEARCH BY NAME</div>
-          <input class="calc-input" type="text" name="query" placeholder="CHARACTER NAME">
+          <input id="cal-input" class="calc-input" type="text" name="character[query]" placeholder="CHARACTER NAME">
           <div class="calc-buttons">
 
           </div>
