@@ -15,7 +15,7 @@
         </form>
       </aside>
       <aside class="mid-sec mt-20">
-        <div class="result-t"><div class="result-title"><%= @presenter.search_results %></div></div>
+        <div class="result-t"><div class="result-title"><%= @presenter.search_results_title %></div></div>
         <div class="result-box">
           <%= render partial: 'attributes_partial'  %>
         </div>
@@ -26,7 +26,7 @@
   </article>
 </section>
 <script type="text/javascript">
-  var search_path = <%= @presenter.search_path %>
+  var path = "<%= @presenter.search_path %>"
   window.onload = function() {
     var charA = "A"
     var charZ = "Z"
@@ -34,7 +34,7 @@
     var a = [], i = charA.charCodeAt(0), j = charZ.charCodeAt(0);
     for (; i <= j; ++i) {
       var char = String.fromCharCode(i)
-      pad.append(`<a href="${ search_path }?query=${char}" class="calc-letter">${char}</a>`);
+      pad.append(`<a href="${path}?query=${char}" class="calc-letter">${char}</a>`);
     }
   }
 </script>

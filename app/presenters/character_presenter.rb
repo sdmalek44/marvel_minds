@@ -15,7 +15,7 @@ class CharacterPresenter
     "/characters"
   end
 
-  def search_results
+  def search_results_title
     "CHARACTER SEARCH RESULTS"
   end
 
