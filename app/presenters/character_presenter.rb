@@ -19,6 +19,10 @@ class CharacterPresenter
     "CHARACTER SEARCH RESULTS"
   end
 
+  def search_placeholder
+    "CHARACTER NAME"
+  end
+
   def search_results
     return [] if @query.empty?
     search_characters.map do |raw_character|

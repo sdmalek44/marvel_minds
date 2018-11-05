@@ -8,7 +8,7 @@
       <aside class="left-sec mt-20">
         <form class="calculator" action="<%= @presenter.search_path %>" method="get">
           <div class="calc-title"><%= @presenter.search_title %></div>
-          <input id="cal-input" class="calc-input" type="text" name="query" placeholder="CHARACTER NAME">
+          <input id="cal-input" class="calc-input" type="text" name="query" placeholder="<%= @presenter.search_placeholder %>">
           <div id="calc-buttons" class="calc-buttons">
           </div>
           <input type="submit" value="SEARCH" class="calc-input sub-button red" >

@@ -20,6 +20,11 @@ class SeriesPresenter
     "SERIES SEARCH RESULTS"
   end
 
+
+  def search_placeholder
+    "SERIES TITLE"
+  end
+
   def search_results
     return [] if @query.empty?
     search_series.map do |raw_character|
