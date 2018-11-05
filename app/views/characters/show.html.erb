@@ -13,9 +13,17 @@
       </aside>
       <aside class="mt-20 one-third border">
         <div class="result-t"><div class="result-title">CHARACTER</div></div>
-        <div class="result-box border flex-c">
+        <div class="result-box border flex-c height-inc">
           <div class="hero-card-show">
-            
+            <div class="char-name"><span><%= @presenter.character.name %></span></div>
+            <img src="<%= @presenter.character.thumbnail_large %>" alt="" class="profile-pic">
+            <article class="attr-box">
+              <div class="hero-descrip"><span class="ul">Description</span>: <span><%= @presenter.character.description %></span></div>
+              <div class="hero-relations">
+                <div class=""><span class="ul">Series</span>: <span><%= @presenter.character.series_count %></span></div>
+                <div class=""><span class="ul">Events</span>: <span><%= @presenter.character.events_count %></span></div>
+              </div>
+            </article>
           </div>
         </div>
       </aside>
