@@ -26,5 +26,16 @@ describe '/characters' do
       expect(page).to have_content("Series: 419")
       expect(page).to have_content("Events: 25")
     end
+    it 'can click on a character and go to show page' do
+      visit '/characters'
+
+      fill_in 'cal-input', with: 'Hulk'
+
+      click_on 'SEARCH'
+
+      first('.hero-card').click
+
+      expect(current_path).to eq('/characters/1009351')
+    end
   end
 end

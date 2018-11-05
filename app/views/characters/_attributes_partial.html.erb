@@ -1,5 +1,5 @@
 <% @presenter.search_results.each do |result| %>
-  <article class="hero-card">
+  <a class="hero-card" href="/characters/<%= result.id %>">
     <img src="<%= result.thumbnail %>" alt="" class="thumb-img">
     <aside class="hero-card-right">
       <div><span class="ul">Name</span>: <span class="hero-name"><%= result.name %></span></div>
@@ -7,5 +7,5 @@
       <div><span class="ul">Series</span>: <%= result.series_count %></div>
       <div><span class="ul">Events</span>: <%= result.events_count %></div>
     </aside>
-  </article>
+  </a>
 <% end %>

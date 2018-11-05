@@ -1,12 +1,16 @@
 class SeriesController < ApplicationController
 
   def index
-    @presenter = presenter
+    @presenter = index_presenter
+  end
+
+  def show
+
   end
 
   private
 
-  def presenter
+  def index_presenter
     return SeriesPresenter.new unless params[:query]
     SeriesPresenter.new(search_params[:query])
   end
