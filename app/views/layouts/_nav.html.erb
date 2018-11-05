@@ -1,0 +1,14 @@
+<nav id="nav-in">
+  <div class="inner-nav">
+    <a href="/" class="nav-items">HOME</a>
+    <a href="/characters" class="nav-items">CHARACTERS</a>
+    <a href="/series" class="nav-items">SERIES</a>
+    <% if current_user %>
+      <a href="/favorites" class="nav-items">FAVORITES</a>
+      <a href="/logout" class="nav-items">SIGN OUT</a>
+    <% else %>
+      <a href="/login" class="nav-items">FAVORITES</a>
+      <a href="/login" class="nav-items">SIGN IN</a>
+    <% end %>
+  </div>
+</nav>
