@@ -18,7 +18,16 @@
       <aside class="mid-sec">
         <div class="result-t"><div class="result-title">CHARACTER SEARCH RESULTS</div></div>
         <div class="result-box">
-
+          <% if @presenter %>
+            <% @presenter.characters.each do |character| %>
+              <article class="">
+                <div>Name: <%= character.name %></div>
+                <div>Description: <%= character.description %></div>
+                <div>Series: <%= character.series_count %></div>
+                <div>Events: <%= character.events_count %></div>  
+              </article>
+            <% end %>
+          <% end %>
         </div>
       </aside>
       <aside class="right-sec">
