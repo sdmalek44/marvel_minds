@@ -1,7 +1,7 @@
 class CharactersController < ApplicationController
 
   def index
-    if params[:character]
+    if params[:query]
       @presenter = CharacterPresenter.new(search_params[:query])
     end
   end
@@ -9,7 +9,7 @@ class CharactersController < ApplicationController
   private
 
   def search_params
-    params.require(:character).permit(:query)
+    params.permit(:query)
   end
 
 end

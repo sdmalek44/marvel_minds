@@ -8,9 +8,9 @@
       <aside class="left-sec mt-20">
         <form class="calculator" action="/characters" method="get">
           <div class="calc-title">SEARCH BY NAME</div>
-          <input id="cal-input" class="calc-input" type="text" name="character[query]" placeholder="CHARACTER NAME">
+          <input id="cal-input" class="calc-input" type="text" name="query" placeholder="CHARACTER NAME">
           <div class="calc-buttons">
-
+            <a href="/characters?query=A" class="calc-letter">A</a>
           </div>
           <input type="submit" value="SEARCH" class="calc-input sub-button red" >
         </form>
@@ -34,7 +34,17 @@
         </div>
       </aside>
       <aside class="right-sec mt-20">
-
+        <ul class="list">
+          <h3 class="list-title">Popular Character Searches</h3>
+          <li class="item">Thor</li>
+          <li class="item">Iron Man</li>
+          <li class="item">Captain America</li>
+          <li class="item">Hulk</li>
+          <li class="item">Spider-Man</li>
+          <li class="item">Black Panther</li>
+          <li class="item">Doctor Strange</li>
+          <li class="item">Daredevil</li>
+        </ul>
       </aside>
     </section>
   </article>
