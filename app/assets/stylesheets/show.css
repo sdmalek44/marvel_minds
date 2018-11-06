@@ -3,12 +3,22 @@
 }
 
 .one-third {
-  width: 33%;
+  width: 38%;
+  flex-direction: column;
+}
+
+.one-fourth {
+  width: 20%;
   flex-direction: column;
 }
 
 .sub-cat-title {
-  width: 50%;
+  width: 60%;
+  height: 100%;
+}
+
+.sub-cat-small {
+  width: 95%;
   height: 100%;
 }
 
@@ -69,4 +79,49 @@
 
 .height-inc {
   height: auto;
+}
+
+.sub-cat-hero-card {
+  border: 2px solid red;
+  display: flex;
+  border-radius: 15px;
+  width: 90%;
+  font-family: 'Special Elite', cursive;
+  color: white;
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+#char-event-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+#char-series-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+.sub-hero-img {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.sub-side-car {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.sub-title {
+  margin-bottom: 10px;
+}
+
+.pad-0 {
 }

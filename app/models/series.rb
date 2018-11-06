@@ -6,7 +6,8 @@ class Series
               :events_count,
               :start_year,
               :end_year,
-              :type
+              :type,
+              :more_info
 
   def initialize(raw_data)
     @id = raw_data[:id]
@@ -14,8 +15,18 @@ class Series
     @start_year = raw_data[:startYear]
     @end_year = raw_data[:endYear]
     @type = raw_data[:type]
-    @thumbnail = raw_data[:thumbnail][:path] + '/standard_xlarge.' + raw_data[:thumbnail][:extension]
+    @thumbnail = raw_data[:thumbnail]
     @characters_count = raw_data[:characters][:available]
     @events_count = raw_data[:events][:available]
+    @more_info = raw_data[:urls][0][:url]
+  end
+
+  def thumbnail
+    @thumbnail[:path] + '/standard_xlarge.' + @thumbnail[:extension]
+  end
+
+
+  def thumbnail_small
+    @thumbnail[:path] + '/portrait_medium.' + @thumbnail[:extension]
   end
 end
