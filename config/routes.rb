@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :characters, only: [:index, :show]
   resources :series, only: [:index, :show]
-  resources :favorites, only: [:index]
+  resources :favorites, only: [:index, :create]
   resources :users, only: [:new, :create]
 
   get "/login", to: "sessions#new"

@@ -11,10 +11,13 @@
 </article>
 <% if current_user %>
   <%= form_tag('/favorites', method: :post, class: 'fav-form')  do %>
-    <%= hidden_field_tag "id", @presenter.character.id %>
+    <%= hidden_field_tag "character_id", @presenter.character.id %>
+    <%= hidden_field_tag "redirect", request.env["PATH_INFO"] %>
+    <%= hidden_field_tag "name", @presenter.character.name %>
     <%= hidden_field_tag "description", @presenter.character.description %>
     <%= hidden_field_tag "thumbnail", @presenter.character.thumbnail %>
     <%= submit_tag 'ADD TO FAVORITES', class: '' %>
   <% end %>
+  <%= flash[:notice] if flash[:notice] %>
 <% end %>
 </div>

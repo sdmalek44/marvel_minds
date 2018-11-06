@@ -25,4 +25,20 @@ describe '/characters/:id' do
       expect(page).to have_content('A+X (2012 - Present)')
     end
   end
+  context 'registered user' do
+    it 'can add a favorite character' do
+      user = create(:user)
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+      visit '/characters/1009351'
+
+      click_on 'ADD TO FAVORITES'
+
+      expect(current_path).to eq('/characters/1009351')
+      expect(page).to have_content("Successfully Added to Favorites!")
+
+      expect(Favorite.all.length).to eq(1)
+    end
+  end
 end

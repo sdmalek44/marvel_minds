@@ -3,7 +3,23 @@
 
 </header>
 <section class="middle-banner">
-  <article class="middle-body">
+  <article class="middle-body mb">
     <%= render partial: "layouts/nav" %>
+    <section class="lower-sec">
+      <aside class="mt-20 one-third">
+        <% @presenter.favorite_characters.each do |favorite| %>
+        <img src="<%= favorite.thumbnail %>" alt="">
+          <div><%= favorite.name %></div>
+          <div><%= favorite.description %></div>
+        <% end %>
+      </aside>
+      <aside class="mt-20 one-third">
+
+      </aside>
+      <aside class="mt-20 one-third">
+
+      </aside>
+    </section>
+
   </article>
 </section>
