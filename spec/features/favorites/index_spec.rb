@@ -4,7 +4,7 @@ describe '/favorites' do
   context 'registered user' do
     it 'can add a favorite character' do
       user = create(:user)
-      favorite = create(:favorite)
+      favorite = create(:favorite_character)
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 

@@ -6,7 +6,7 @@
     <%= render partial: "layouts/nav" %>
     <article class="mid-fav mt-30">
       <aside class="one-half">
-        <div class="result-t height-15 mb-30"><div class="result-title sub-cat-title">CHARACTERS</div></div>
+        <div class="result-t height-40 mb-30"><div class="result-title sub-cat-title">CHARACTERS</div></div>
         <% @presenter.favorite_characters.each do |favorite| %>
         <article class="her-card font-med">
           <img src="<%= favorite.thumbnail %>" alt="" class="sub-hero-img">
@@ -17,11 +17,20 @@
         </article>
         <% end %>
       </aside>
-      <aside class="one-half border">
-
+      <aside class="one-half">
+        <div class="result-t height-40 mb-30"><div class="result-title sub-cat-title">SERIES</div></div>
+        <% @presenter.favorite_series.each do |favorite| %>
+        <article class="her-card font-med">
+          <img src="<%= favorite.thumbnail %>" alt="" class="sub-hero-img">
+          <article class="sub-side-car">
+            <div class="sub-title"><span >Title</span>: <span class="font-big"><%= favorite.title %></span></div>
+            <div class=""><span>Start Year</span>: <span><%= favorite.start_year %></span></div>
+            <div class=""><span>End Year</span>: <span><%= favorite.end_year %></span></div>
+          </article>
+        </article>
+        <% end %>
       </aside>
     </article>
-
     </section>
 
   </article>

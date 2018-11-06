@@ -1,0 +1,2 @@
+class FavoriteSeries < ApplicationRecord
+end

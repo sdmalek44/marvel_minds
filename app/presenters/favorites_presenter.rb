@@ -5,6 +5,11 @@ class FavoritesPresenter
   end
 
   def favorite_characters
-    @user.favorites
+    @user.favorite_characters
   end
+
+  def favorite_series
+    @user.favorite_series
+  end
+  
 end

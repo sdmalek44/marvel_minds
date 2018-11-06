@@ -38,7 +38,7 @@ describe '/characters/:id' do
       expect(current_path).to eq('/characters/1009351')
       expect(page).to have_content("Successfully Added to Favorites!")
 
-      expect(Favorite.all.length).to eq(1)
+      expect(FavoriteCharacter.all.length).to eq(1)
     end
   end
 end

@@ -1,6 +1,6 @@
-class CreateFavorites < ActiveRecord::Migration[5.2]
+class CreateFavoriteCharacters < ActiveRecord::Migration[5.2]
   def change
-    create_table :favorites do |t|
+    create_table :favorite_characters do |t|
       t.string :character_id
       t.string :name
       t.text :description

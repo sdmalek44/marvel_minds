@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_06_040325) do
+ActiveRecord::Schema.define(version: 2018_11_06_175243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "favorites", force: :cascade do |t|
+  create_table "favorite_characters", force: :cascade do |t|
     t.string "character_id"
     t.string "name"
     t.text "description"
@@ -23,7 +23,19 @@ ActiveRecord::Schema.define(version: 2018_11_06_040325) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_favorites_on_user_id"
+    t.index ["user_id"], name: "index_favorite_characters_on_user_id"
+  end
+
+  create_table "favorite_series", force: :cascade do |t|
+    t.string "series_id"
+    t.string "title"
+    t.string "thumbnail"
+    t.integer "start_year"
+    t.integer "end_year"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_favorite_series_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,5 +45,6 @@ ActiveRecord::Schema.define(version: 2018_11_06_040325) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "favorites", "users"
+  add_foreign_key "favorite_characters", "users"
+  add_foreign_key "favorite_series", "users"
 end

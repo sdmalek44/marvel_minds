@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :favorite do
+  factory :favorite_character do
     character_id { "1009351" }
     name { "Hulk" }
     description { "blah blah blah" }
