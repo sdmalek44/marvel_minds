@@ -1,4 +1,4 @@
 class Favorite < ApplicationRecord
-  validates_presence_of :character_id, :description, :name, :thumbnail
+  validates_presence_of :character_id, :name, :thumbnail
   belongs_to :user
 end

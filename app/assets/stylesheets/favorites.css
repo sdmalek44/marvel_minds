@@ -1,0 +1,48 @@
+.one-half {
+  border: 2px solid white;
+  width: 45%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+
+
+.mid-fav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.font-med {
+  font-size: 20px;
+}
+
+.font-big {
+  font-size: 35px;
+}
+
+.hig-100 {
+  height: 100%;
+}
+
+.her-card {
+  border: 2px solid red;
+  display: flex;
+  border-radius: 15px;
+  width: 90%;
+  font-family: 'Special Elite', cursive;
+  color: white;
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}

@@ -2,23 +2,26 @@
     <div class="title">YOUR FAVORITES</div>
 
 </header>
-<section class="middle-banner">
-  <article class="middle-body mb">
+<section class="middle-bannerhig-100">
     <%= render partial: "layouts/nav" %>
-    <section class="lower-sec">
-      <aside class="mt-20 one-third">
+    <article class="mid-fav mt-30">
+      <aside class="one-half">
+        <div class="result-t height-15 mb-30"><div class="result-title sub-cat-title">CHARACTERS</div></div>
         <% @presenter.favorite_characters.each do |favorite| %>
-        <img src="<%= favorite.thumbnail %>" alt="">
-          <div><%= favorite.name %></div>
-          <div><%= favorite.description %></div>
+        <article class="her-card font-med">
+          <img src="<%= favorite.thumbnail %>" alt="" class="sub-hero-img">
+          <article class="sub-side-car">
+            <div class="sub-title"><span >Name</span>: <span class="font-big"><%= favorite.name %></span></div>
+            <div class=""><span>Description</span>: <span><%= favorite.description %></span></div>
+          </article>
+        </article>
         <% end %>
       </aside>
-      <aside class="mt-20 one-third">
+      <aside class="one-half border">
 
       </aside>
-      <aside class="mt-20 one-third">
+    </article>
 
-      </aside>
     </section>
 
   </article>
