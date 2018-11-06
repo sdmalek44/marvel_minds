@@ -36,7 +36,7 @@ describe '/characters/:id' do
       click_on 'ADD TO FAVORITES'
 
       expect(current_path).to eq('/characters/1009351')
-      expect(page).to have_content("Successfully Added to Favorites!")
+      expect(page).to have_content("This card is now in your Favorites!")
 
       expect(FavoriteCharacter.all.length).to eq(1)
     end
