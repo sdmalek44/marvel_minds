@@ -1,0 +1,13 @@
+<div class="hero-card-show w">
+
+<div class="char-name marg"><span><%= @presenter.series.title %></span></div>
+<img src="<%= @presenter.series.thumbnail_large %>" alt="" class="profile-pic img-shrink">
+<article class="attr-box">
+  <div class="hero-descrip"><span class="ul">Start Year</span>: <span><%= @presenter.series.start_year %></span></div>
+  <div class="hero-descrip"><span class="ul">End Year</span>: <span><%= @presenter.series.end_year %></span></div>
+  <div class="hero-relations">
+    <div class=""><span class="ul">Characters</span>: <span><%= @presenter.series.characters_count %></span></div>
+    <div class=""><span class="ul">Events</span>: <span><%= @presenter.series.events_count %></span></div>
+  </div>
+</article>
+</div>

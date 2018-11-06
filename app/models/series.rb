@@ -29,4 +29,8 @@ class Series
   def thumbnail_small
     @thumbnail[:path] + '/portrait_medium.' + @thumbnail[:extension]
   end
+
+  def thumbnail_large
+    @thumbnail[:path] + '/portrait_uncanny.' + @thumbnail[:extension]
+  end
 end

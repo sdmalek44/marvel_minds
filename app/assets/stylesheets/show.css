@@ -125,3 +125,17 @@
 
 .pad-0 {
 }
+
+.img-shrink {
+  height: 50%;
+  width: 50%;
+}
+
+.w {
+  width: 85%;
+}
+
+.marg {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}

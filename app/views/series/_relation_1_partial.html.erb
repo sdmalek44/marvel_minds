@@ -1,0 +1,11 @@
+
+<% @presenter.series_characters.each do |character| %>
+<article class="sub-cat-hero-card">
+  <img src="<%= character.thumbnail_small %>" alt="" class="sub-hero-img">
+  <article class="sub-side-car">
+    <div class=""><span>Title</span>: <span><%= character.name %></span></div>
+    <div class=""><span>Description</span>: <span><%= character.description %></span></div>
+    <a href="<%= character.more_info %>">More Info</a>
+  </article>
+</article>
+<% end %>
