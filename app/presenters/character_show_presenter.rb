@@ -3,8 +3,20 @@ class CharacterShowPresenter
     @character_id = character_id
   end
 
+  def title
+    "CHARACTER PROFILE"
+  end
+
   def character
     Character.new(character_data)
+  end
+
+  def relation_1
+    "CHARACTER SERIES"
+  end
+
+  def relation_2
+    "CHARACTER EVENTS"
   end
 
   def character_events

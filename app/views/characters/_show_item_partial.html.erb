@@ -1,0 +1,23 @@
+
+<div class="hero-card-show w">
+<div class="char-name tl-c"><span><%= @presenter.character.name %></span></div>
+<img src="<%= @presenter.character.thumbnail_large %>" alt="" class="profile-pic">
+<div class="add-flash"><%= flash[:notice] if flash[:notice] %></div>
+<article class="attr-box">
+  <div class="hero-descrip"><span class="ul">Description</span>: <span><%= @presenter.character.description %></span></div>
+  <div class="hero-relations">
+    <div class=""><span class="ul">Series</span>: <span><%= @presenter.character.series_count %></span></div>
+    <div class=""><span class="ul">Events</span>: <span><%= @presenter.character.events_count %></span></div>
+  </div>
+</article>
+<% if current_user %>
+  <%= form_tag('/favorites', method: :post, class: 'fav-form')  do %>
+    <%= hidden_field_tag "character_id", @presenter.character.id %>
+    <%= hidden_field_tag "redirect", request.env["PATH_INFO"] %>
+    <%= hidden_field_tag "name", @presenter.character.name %>
+    <%= hidden_field_tag "description", @presenter.character.description %>
+    <%= hidden_field_tag "thumbnail", @presenter.character.thumbnail %>
+    <%= submit_tag 'ADD TO FAVORITES', class: 'fav-but green' %>
+  <% end %>
+<% end %>
+</div>

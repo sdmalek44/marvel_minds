@@ -39,6 +39,7 @@
   flex-direction: column;
   align-items: center;
   background-color:rgb(0, 14, 38);
+  margin-bottom: 60px;
 }
 
 .profile-pic {
@@ -55,13 +56,14 @@
   flex-direction: column;
   border-radius: 15px;
   background-color: rgb(211, 218, 229);
+  padding: 8px;
   margin: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .char-name {
   font-family: 'Merriweather Sans', sans-serif;
-  font-size: 40px;
+  font-size: 35px;
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   margin: 10px;
@@ -75,6 +77,7 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  margin-bottom: 15px;
 }
 
 .height-inc {
@@ -82,10 +85,9 @@
 }
 
 .sub-cat-hero-card {
-  border: 2px solid red;
   display: flex;
   border-radius: 15px;
-  width: 90%;
+  width: 100%;
   font-family: 'Special Elite', cursive;
   color: white;
   background-color: black;
@@ -115,8 +117,9 @@
 .sub-side-car {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   padding: 15px;
-  justify-content: space-between;
+
 }
 
 .sub-title {
@@ -124,4 +127,59 @@
 }
 
 .pad-0 {
+}
+
+.img-shrink {
+  height: 50%;
+  width: 50%;
+}
+
+.w {
+  width: 85%;
+}
+
+.marg {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.directions {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dir-text {
+  width: 100%;
+  height: 50%;
+  font-size: 40px;
+  font-family: 'Merriweather Sans', sans-serif;
+  color: white;
+  text-align: center;
+  margin-right: 25px;
+}
+
+.title-bigger {
+  font-size: 20px;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.red-b {
+  border: 2px solid rgb(255, 135, 84);
+}
+
+.blue-b {
+  border: 2px solid rgb(92, 229, 242);
+}
+
+.pt-10 {
+  padding-top: 10px;
 }
