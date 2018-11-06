@@ -21,7 +21,7 @@ class CharacterShowPresenter
   end
 
   def conn
-    @conn ||= Faraday.new('https://gateway.marvel.com:443') do |faraday|
+    @conn ||= Faraday.new('https://gateway.marvel.com') do |faraday|
       faraday.adapter Faraday.default_adapter
     end
   end
