@@ -1,0 +1,10 @@
+<% @presenter.series_events.each do |event| %>
+<article class="sub-cat-hero-card">
+  <img src="<%= event.thumbnail_small %>" alt="" class="sub-hero-img">
+  <article class="sub-side-car">
+    <div class="sub-title"><span>Title</span>: <span><%= event.title %></span></div>
+    <div class=""><span>Description</span>: <span><%= event.description %></span></div>
+    <a href="<%= event.more_info %>" class="">More Info</a>
+  </article>
+</article>
+<% end %>

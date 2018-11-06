@@ -32,6 +32,17 @@ class SeriesShowPresenter
     end
   end
 
+  def series_events
+    series_events_data.map do |raw_events|
+      Event.new(raw_events)
+    end
+  end
+
+  def series_events_data
+    data = get_json("/v1/public/series/#{@series_id}/events?ts=1&apikey=1d68fdb48109bd44fd202dd9c0df3866&hash=108c35713f83d455e1a871dd3858751d")
+    @series_events ||= data[:data][:results] if data[:code] == 200
+  end
+
   def series_characters_data
     data = get_json("/v1/public/series/#{@series_id}/characters?ts=1&apikey=1d68fdb48109bd44fd202dd9c0df3866&hash=108c35713f83d455e1a871dd3858751d")
     @series_series ||= data[:data][:results] if data[:code] == 200

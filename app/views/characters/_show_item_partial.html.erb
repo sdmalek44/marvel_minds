@@ -9,4 +9,12 @@
     <div class=""><span class="ul">Events</span>: <span><%= @presenter.character.events_count %></span></div>
   </div>
 </article>
+<% if current_user %>
+  <%= form_tag('/favorites', method: :post, class: 'fav-form')  do %>
+    <%= hidden_field_tag "id", @presenter.character.id %>
+    <%= hidden_field_tag "description", @presenter.character.description %>
+    <%= hidden_field_tag "thumbnail", @presenter.character.thumbnail %>
+    <%= submit_tag 'ADD TO FAVORITES', class: '' %>
+  <% end %>
+<% end %>
 </div>

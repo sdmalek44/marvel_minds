@@ -7,18 +7,18 @@
     <%= render partial: "layouts/nav" %>
     <section class="lower-sec">
 
-      <aside class="mt-20 one-third border">
+      <aside class="mt-20 one-third">
         <div class="result-box flex-c height-inc">
             <%= render partial: 'show_item_partial' %>
         </div>
       </aside>
-      <aside class="mt-20 one-third border">
+      <aside class="mt-20 one-third">
         <div class="result-t height-15"><div class="result-title sub-cat-small"><%= @presenter.relation_1 %></div></div>
         <div id="char-series-box" class="result-box">
           <%= render partial: 'relation_1_partial' %>
         </div>
       </aside>
-      <aside class="mt-20 one-third border">
+      <aside class="mt-20 one-third">
         <div class="result-t height-15"><div class="result-title sub-cat-title"><%= @presenter.relation_2 %></div></div>
         <div id="char-event-box" class="result-box">
           <%= render partial: 'relation_2_partial' %>
