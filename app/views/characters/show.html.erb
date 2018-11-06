@@ -1,0 +1,59 @@
+
+
+<header class="title-banner">
+    <div class="title">CHARACTER PROFILE</div>
+</header>
+<section class="middle-banner">
+  <article class="middle-body mb">
+    <%= render partial: "layouts/nav" %>
+    <section class="lower-sec">
+
+      <aside class="mt-20 one-third">
+        <div class="result-box flex-c height-inc">
+          <div class="hero-card-show">
+            <div class="char-name"><span><%= @presenter.character.name %></span></div>
+            <img src="<%= @presenter.character.thumbnail_large %>" alt="" class="profile-pic">
+            <article class="attr-box">
+              <div class="hero-descrip"><span class="ul">Description</span>: <span><%= @presenter.character.description %></span></div>
+              <div class="hero-relations">
+                <div class=""><span class="ul">Series</span>: <span><%= @presenter.character.series_count %></span></div>
+                <div class=""><span class="ul">Events</span>: <span><%= @presenter.character.events_count %></span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </aside>
+      <aside class="mt-20 one-fourth">
+        <div class="result-t height-15"><div class="result-title sub-cat-small">CHARACTER SERIES</div></div>
+        <div id="char-series-box" class="result-box">
+          <% @presenter.character_series.each do |series| %>
+          <article class="sub-cat-hero-card">
+            <img src="<%= series.thumbnail_small %>" alt="" class="sub-hero-img">
+            <article class="sub-side-car">
+              <div class=""><span>Title</span>: <span><%= series.title %></span></div>
+              <div class=""><span>Start Year</span>: <span><%= series.start_year %></span></div>
+              <div class=""><span>End Year</span>: <span><%= series.end_year %></span></div>
+              <a href="<%= series.more_info %>">More Info</a>
+            </article>
+          </article>
+          <% end %>
+        </div>
+      </aside>
+      <aside class="mt-20 one-third">
+        <div class="result-t height-15"><div class="result-title sub-cat-title">CHARACTER EVENTS</div></div>
+        <div id="char-event-box" class="result-box">
+          <% @presenter.character_events.each do |event| %>
+          <article class="sub-cat-hero-card">
+            <img src="<%= event.thumbnail_small %>" alt="" class="sub-hero-img">
+            <article class="sub-side-car">
+              <div class="sub-title"><span>Title</span>: <span><%= event.title %></span></div>
+              <div class=""><span>Description</span>: <span><%= event.description %></span></div>
+              <a href="<%= event.more_info %>" class="">More Info</a>
+            </article>
+          </article>
+          <% end %>
+        </div>
+      </aside>
+    </section>
+  </article>
+</section>
