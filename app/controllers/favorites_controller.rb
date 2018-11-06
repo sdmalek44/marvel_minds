@@ -6,14 +6,10 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    favorite = current_user.favorite_characters.create(favorite_params)
-    flash[:notice] = "Successfully Added to Favorites!" if favorite.save
-    redirect_to params[:redirect]
+    fc = FavoritesCreator.new(params, current_user)
+    fc.create_favorite
+    flash[:notice] = fc.result
+    redirect_to fc.redirect
   end
 
-  private
-
-  def favorite_params
-    params.permit(:character_id, :description, :name, :thumbnail)
-  end
 end

@@ -1,6 +1,6 @@
 
 <div class="hero-card-show">
-<div class="char-name"><span><%= @presenter.character.name %></span></div>
+<div class="char-name tl-c"><span><%= @presenter.character.name %></span></div>
 <img src="<%= @presenter.character.thumbnail_large %>" alt="" class="profile-pic">
 <article class="attr-box">
   <div class="hero-descrip"><span class="ul">Description</span>: <span><%= @presenter.character.description %></span></div>
@@ -16,8 +16,8 @@
     <%= hidden_field_tag "name", @presenter.character.name %>
     <%= hidden_field_tag "description", @presenter.character.description %>
     <%= hidden_field_tag "thumbnail", @presenter.character.thumbnail %>
-    <%= submit_tag 'ADD TO FAVORITES', class: '' %>
+    <%= submit_tag 'ADD TO FAVORITES', class: 'fav-but green' %>
   <% end %>
-  <%= flash[:notice] if flash[:notice] %>
+  <div class="add-flash"><%= flash[:notice] if flash[:notice] %></div>
 <% end %>
 </div>

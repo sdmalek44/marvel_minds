@@ -2,32 +2,32 @@
     <div class="title">YOUR FAVORITES</div>
 
 </header>
-<section class="middle-bannerhig-100">
+<section class="middle-banner">
     <%= render partial: "layouts/nav" %>
     <article class="mid-fav mt-30">
       <aside class="one-half">
         <div class="result-t height-40 mb-30"><div class="result-title sub-cat-title">CHARACTERS</div></div>
         <% @presenter.favorite_characters.each do |favorite| %>
-        <article class="her-card font-med">
+        <a class="her-card font-med" href="/characters/<%= favorite.character_id %>">
           <img src="<%= favorite.thumbnail %>" alt="" class="sub-hero-img">
           <article class="sub-side-car">
             <div class="sub-title"><span >Name</span>: <span class="font-big"><%= favorite.name %></span></div>
             <div class=""><span>Description</span>: <span><%= favorite.description %></span></div>
           </article>
-        </article>
+        </a>
         <% end %>
       </aside>
       <aside class="one-half">
         <div class="result-t height-40 mb-30"><div class="result-title sub-cat-title">SERIES</div></div>
         <% @presenter.favorite_series.each do |favorite| %>
-        <article class="her-card font-med">
+        <a class="her-card font-med" href="/series/<%= favorite.series_id %>">
           <img src="<%= favorite.thumbnail %>" alt="" class="sub-hero-img">
           <article class="sub-side-car">
             <div class="sub-title"><span >Title</span>: <span class="font-big"><%= favorite.title %></span></div>
             <div class=""><span>Start Year</span>: <span><%= favorite.start_year %></span></div>
             <div class=""><span>End Year</span>: <span><%= favorite.end_year %></span></div>
           </article>
-        </article>
+        </a>
         <% end %>
       </aside>
     </article>

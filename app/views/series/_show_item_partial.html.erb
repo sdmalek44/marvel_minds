@@ -1,7 +1,8 @@
 <div class="hero-card-show w">
 
-<div class="char-name marg"><span><%= @presenter.series.title %></span></div>
+<div class="char-name marg tl-c"><span><%= @presenter.series.title %></span></div>
 <img src="<%= @presenter.series.thumbnail_large %>" alt="" class="profile-pic img-shrink">
+<div class="add-flash"><%= flash[:notice] if flash[:notice] %></div>
 <article class="attr-box">
   <div class="hero-descrip"><span class="ul">Start Year</span>: <span><%= @presenter.series.start_year %></span></div>
   <div class="hero-descrip"><span class="ul">End Year</span>: <span><%= @presenter.series.end_year %></span></div>
@@ -10,4 +11,15 @@
     <div class=""><span class="ul">Events</span>: <span><%= @presenter.series.events_count %></span></div>
   </div>
 </article>
+<% if current_user %>
+  <%= form_tag('/favorites', method: :post, class: 'fav-form')  do %>
+    <%= hidden_field_tag "series_id", @presenter.series.id %>
+    <%= hidden_field_tag "redirect", request.env["PATH_INFO"] %>
+    <%= hidden_field_tag "title", @presenter.series.title %>
+    <%= hidden_field_tag "start_year", @presenter.series.start_year %>
+    <%= hidden_field_tag "end_year", @presenter.series.end_year %>
+    <%= hidden_field_tag "thumbnail", @presenter.series.thumbnail %>
+    <%= submit_tag 'ADD TO FAVORITES', class: 'fav-but green' %>
+  <% end %>
+<% end %>
 </div>
