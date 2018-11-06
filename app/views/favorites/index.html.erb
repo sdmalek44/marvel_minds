@@ -2,17 +2,17 @@
     <div class="title">YOUR FAVORITES</div>
 
 </header>
-<section class="middle-banner">
+<section class="middle-banner h-auto">
     <%= render partial: "layouts/nav" %>
-    <article class="mid-fav mt-30">
+    <article class="mid-fav mt-30 h-auto">
       <aside class="one-half">
         <div class="result-t height-40 mb-30"><div class="result-title sub-cat-title">CHARACTERS</div></div>
         <% @presenter.favorite_characters.each do |favorite| %>
-        <a class="her-card font-med" href="/characters/<%= favorite.character_id %>">
+        <a class="her-card font-med no-dec blue-b" href="/characters/<%= favorite.character_id %>">
           <img src="<%= favorite.thumbnail %>" alt="" class="sub-hero-img">
-          <article class="sub-side-car">
-            <div class="sub-title"><span >Name</span>: <span class="font-big"><%= favorite.name %></span></div>
-            <div class=""><span>Description</span>: <span><%= favorite.description %></span></div>
+          <article class="sub-side-car pad">
+            <div class="sub-title"><span class="ul" >Name</span>: <span class="font-big blue-t"><%= favorite.name %></span></div>
+            <div class=""><span class="ul">Description</span>: <span><%= favorite.description %></span></div>
           </article>
         </a>
         <% end %>
@@ -20,18 +20,17 @@
       <aside class="one-half">
         <div class="result-t height-40 mb-30"><div class="result-title sub-cat-title">SERIES</div></div>
         <% @presenter.favorite_series.each do |favorite| %>
-        <a class="her-card font-med" href="/series/<%= favorite.series_id %>">
+        <a class="her-card font-med no-dec red-b" href="/series/<%= favorite.series_id %>">
           <img src="<%= favorite.thumbnail %>" alt="" class="sub-hero-img">
           <article class="sub-side-car">
-            <div class="sub-title"><span >Title</span>: <span class="font-big"><%= favorite.title %></span></div>
-            <div class=""><span>Start Year</span>: <span><%= favorite.start_year %></span></div>
-            <div class=""><span>End Year</span>: <span><%= favorite.end_year %></span></div>
+            <div class="sub-title"><span class="ul">Title</span>: <span class="font-big tl-c red-t"><%= favorite.title %></span></div>
+            <div class=""><span class="ul">Start Year</span>: <span><%= favorite.start_year %></span></div>
+            <div class=""><span class="ul">End Year</span>: <span><%= favorite.end_year %></span></div>
           </article>
         </a>
         <% end %>
       </aside>
     </article>
     </section>
-
   </article>
 </section>

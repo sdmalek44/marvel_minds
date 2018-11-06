@@ -1,11 +1,11 @@
 <% @presenter.character_series.each do |series| %>
-<article class="sub-cat-hero-card">
+<article class="sub-cat-hero-card blue-b">
   <img src="<%= series.thumbnail_small %>" alt="" class="sub-hero-img">
   <article class="sub-side-car">
-    <div class=""><span>Title</span>: <span><%= series.title %></span></div>
-    <div class=""><span>Start Year</span>: <span><%= series.start_year %></span></div>
-    <div class=""><span>End Year</span>: <span><%= series.end_year %></span></div>
-    <a href="<%= series.more_info %>">More Info</a>
+    <div class=""><span class="title-bigger tl-c blue-t"><%= series.title %></span></div>
+    <div class=""><span class="ul">Start Year</span>: <span><%= series.start_year %></span></div>
+    <div class=""><span class="ul">End Year</span>: <span><%= series.end_year %></span></div>
+    <a href="<%= series.more_info %>" class="pt-10">More Info</a>
   </article>
 </article>
 <% end %>

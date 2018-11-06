@@ -9,11 +9,16 @@ class Character
   def initialize(raw_data)
     @id = raw_data[:id]
     @name = raw_data[:name]
-    @description = raw_data[:description] || "No Description"
+    @description = raw_data[:description] || ""
     @thumbnail = raw_data[:thumbnail]
     @series_count = raw_data[:series][:available]
     @events_count = raw_data[:events][:available]
     @more_info = raw_data[:urls][0][:url] if raw_data[:urls]
+  end
+
+  def description
+    return "None" if @description.empty?
+    @description
   end
 
   def thumbnail

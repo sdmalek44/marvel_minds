@@ -28,7 +28,6 @@
 }
 
 .her-card {
-  border: 2px solid red;
   display: flex;
   border-radius: 15px;
   width: 90%;
@@ -78,4 +77,36 @@
 
 .tl-c {
   text-align: center;
+}
+
+.no-dec {
+  text-decoration: none;
+}
+
+.blue-t {
+  color: rgb(139, 230, 239);
+}
+
+.red-t {
+  color: rgb(255, 172, 137);
+}
+
+.red-b {
+  border: 2px solid rgb(255, 135, 84);
+}
+
+.blue-b {
+  border: 2px solid rgb(92, 229, 242);
+}
+
+.h-50px {
+  height: 50px;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.pad {
+  padding: 15px;
 }
