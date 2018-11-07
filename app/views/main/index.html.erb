@@ -23,12 +23,12 @@
             <a class="button-fat" id="series-pic" href="/series" ><div>SERIES</div></a>
           </article>
           <article class="bottom-cent">
+            <a href="/game" id="game-pic" class="button-flat"><div>GAME</div></a>
             <% if current_user %>
               <a href="/favorites" id="log-to-fav" class="button-flat"><div>FAVORITES</div></a>
             <% else %>
               <a href="/login" id="log-to-fav" class="button-flat"><div>FAVORITES</div></a>
             <% end %>
-            <a href="/game" id="game-pic" class="button-flat"><div>GAME</div></a>
           </article>
           <% if flash[:notice]%>
           <div class="desc"><%= flash[:notice] %></div>
