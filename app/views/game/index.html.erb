@@ -3,85 +3,87 @@
 
 </header>
 <section class="middle-banner h-auto">
-  <%= render partial: "layouts/nav" %>
-  <article class="mid-fav mt-15">
-    <section class="instruct-box">
-      <div class="inner-instruct">
-        <div class="inner-face">
-          <div class="card-title">
-            INSTRUCTIONS
+  <article class="middle-body mb h-auto">
+      <%= render partial: "layouts/nav" %>
+    <article class="mid-fav mt-15">
+      <section class="instruct-box">
+        <div class="inner-instruct">
+          <div class="inner-face">
+            <div class="card-title">
+              INSTRUCTIONS
+            </div>
+            <ul class="card-desc">
+              <li>Click on a card to turn it over and reveal a marvel character</li>
+              <li>You can only turn over two cards at a time</li>
+              <li>When two photos match. They will stay revealed.</li>
+              <li>If you reveal all of the cards you win!</li>
+              <li>At the end of a game the cards are flipped back over and shuffled</li>
+            </ul>
           </div>
-          <ul class="card-desc">
-            <li>Click on a card to turn it over and reveal a marvel character</li>
-            <li>You can only turn over two cards at a time</li>
-            <li>When two photos match. They will stay revealed.</li>
-            <li>If you reveal all of the cards you win!</li>
-            <li>At the end of a game the cards are flipped back over and shuffled</li>
-          </ul>
         </div>
-      </div>
-    </section>
-    <section class="memory-game">
-      <div class="memory-card" data-character="hulk">
-        <img class="front-face" src="https://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0/portrait_xlarge.jpg" alt="hulk" />
-        <%= image_tag("marvel-card.png", class: "back-face") %>
+      </section>
+      <section class="memory-game">
+        <div class="memory-card" data-character="hulk">
+          <img class="front-face" src="https://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0/portrait_xlarge.jpg" alt="hulk" />
+          <%= image_tag("marvel-card.png", class: "back-face") %>
 
-      </div>
-      <div class="memory-card" data-character="spiderman">
-        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b/portrait_xlarge.jpg" alt="spiderman" />
-        <%= image_tag("marvel-card.png", class: "back-face") %>
+        </div>
+        <div class="memory-card" data-character="spiderman">
+          <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b/portrait_xlarge.jpg" alt="spiderman" />
+          <%= image_tag("marvel-card.png", class: "back-face") %>
 
-      </div>
+        </div>
 
-      <div class="memory-card" data-character="captain-america">
-        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087/portrait_xlarge.jpg" alt="captain-america" />
-        <%= image_tag("marvel-card.png", class: "back-face") %>
-      </div>
-      <div class="memory-card" data-character="thor">
-        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350/portrait_xlarge.jpg" alt="thor" />
-        <%= image_tag("marvel-card.png", class: "back-face") %>
+        <div class="memory-card" data-character="captain-america">
+          <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087/portrait_xlarge.jpg" alt="captain-america" />
+          <%= image_tag("marvel-card.png", class: "back-face") %>
+        </div>
+        <div class="memory-card" data-character="thor">
+          <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350/portrait_xlarge.jpg" alt="thor" />
+          <%= image_tag("marvel-card.png", class: "back-face") %>
 
-      </div>
-      <div class="memory-card" data-character="iron-man">
-        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55/portrait_xlarge.jpg" alt="iron-man" />
-        <%= image_tag("marvel-card.png", class: "back-face") %>
+        </div>
+        <div class="memory-card" data-character="iron-man">
+          <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55/portrait_xlarge.jpg" alt="iron-man" />
+          <%= image_tag("marvel-card.png", class: "back-face") %>
 
-      </div>
-      <div class="memory-card" data-character="wolverine">
-        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf/portrait_xlarge.jpg" alt="wolverine" />
-        <%= image_tag("marvel-card.png", class: "back-face") %>
+        </div>
+        <div class="memory-card" data-character="wolverine">
+          <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf/portrait_xlarge.jpg" alt="wolverine" />
+          <%= image_tag("marvel-card.png", class: "back-face") %>
 
-      </div>
-      <div class="memory-card" data-character="hulk">
-        <img class="front-face" src="https://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0/portrait_xlarge.jpg" alt="hulk" />
-        <%= image_tag("marvel-card.png", class: "back-face") %>
+        </div>
+        <div class="memory-card" data-character="hulk">
+          <img class="front-face" src="https://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0/portrait_xlarge.jpg" alt="hulk" />
+          <%= image_tag("marvel-card.png", class: "back-face") %>
 
-      </div>
-      <div class="memory-card" data-character="spiderman">
-        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b/portrait_xlarge.jpg" alt="spiderman" />
-        <%= image_tag("marvel-card.png", class: "back-face") %>
+        </div>
+        <div class="memory-card" data-character="spiderman">
+          <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b/portrait_xlarge.jpg" alt="spiderman" />
+          <%= image_tag("marvel-card.png", class: "back-face") %>
 
-      </div>
-      <div class="memory-card" data-character="captain-america">
-        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087/portrait_xlarge.jpg" alt="captain-america" />
-        <%= image_tag("marvel-card.png", class: "back-face") %>
+        </div>
+        <div class="memory-card" data-character="captain-america">
+          <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087/portrait_xlarge.jpg" alt="captain-america" />
+          <%= image_tag("marvel-card.png", class: "back-face") %>
 
-      </div>
-      <div class="memory-card" data-character="thor">
-        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350/portrait_xlarge.jpg" alt="thor" />
-        <%= image_tag("marvel-card.png", class: "back-face") %>
+        </div>
+        <div class="memory-card" data-character="thor">
+          <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350/portrait_xlarge.jpg" alt="thor" />
+          <%= image_tag("marvel-card.png", class: "back-face") %>
 
-      </div>
-      <div class="memory-card" data-character="iron-man">
-        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55/portrait_xlarge.jpg" alt="iron-man" />
-        <%= image_tag("marvel-card.png", class: "back-face") %>
+        </div>
+        <div class="memory-card" data-character="iron-man">
+          <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55/portrait_xlarge.jpg" alt="iron-man" />
+          <%= image_tag("marvel-card.png", class: "back-face") %>
 
-      </div>
-      <div class="memory-card" data-character="wolverine">
-        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf/portrait_xlarge.jpg" alt="wolverine" />
-        <%= image_tag("marvel-card.png", class: "back-face") %>
+        </div>
+        <div class="memory-card" data-character="wolverine">
+          <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf/portrait_xlarge.jpg" alt="wolverine" />
+          <%= image_tag("marvel-card.png", class: "back-face") %>
 
-      </div>
+        </div>
+      </section>
     </section>
   </article>
 </section>
