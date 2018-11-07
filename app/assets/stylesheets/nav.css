@@ -29,3 +29,27 @@
 .border {
   border: 2px solid yellow;
 }
+
+.space {
+  border: 2px solid rgb(38, 110, 246);
+}
+
+.power {
+  border: 2px solid rgb(228, 41, 242);
+}
+
+.soul {
+  border: 2px solid rgb(255, 139, 0);
+}
+
+.reality {
+  border: 2px solid rgb(255, 1, 48);
+}
+
+.mind {
+  border: 2px solid rgb(255, 211, 0);
+}
+
+.time {
+  border: 2px solid rgb(18, 231, 114);
+}

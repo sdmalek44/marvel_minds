@@ -93,7 +93,7 @@ body {
 }
 
 #chars-pic {
-  background-image: url('marvel-characters.jpg');
+  background-image: url(<%= asset_path('marvel-characters') %>);
   background-size: cover;
   background-position: center;
   opacity: 0.95;
@@ -101,7 +101,7 @@ body {
 }
 
 #series-pic {
-  background-image: url('marvel-series-crop.jpg');
+  background-image: url(<%= asset_path('marvel-series-crop') %>);
   background-size: cover;
   background-position: center;
   opacity: 0.95;
@@ -139,9 +139,13 @@ body {
 }
 
 #log-to-fav {
-  background-image: url('marvel-favorites.jpg');
+  background-image: url(<%= asset_path('marvel-favorites') %>);
 
 }
 #game-pic {
-  background-image: url('favorites-deadpool.jpg');
+  background-image: url(<%= asset_path('favorites-deadpool') %>);
+}
+
+.log-link {
+  color: white;
 }

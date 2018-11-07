@@ -183,3 +183,14 @@
 .pt-10 {
   padding-top: 10px;
 }
+
+.m-none {
+  margin-left: 0;
+  padding-left: 5;
+  text-align: left;
+}
+
+.it {
+  display: flex;
+  flex-wrap: wrap;
+}
