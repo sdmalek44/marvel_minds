@@ -90,7 +90,6 @@ body {
   font-family: 'Anton', sans-serif;
   font-size: 90px;
   text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
-
 }
 
 #chars-pic {
@@ -111,30 +110,38 @@ body {
 }
 
 .bottom-cent {
-  height: 40%;
+  height: 48%;
   display: flex;
-  flex-direction: column;
+  flex-direction: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .button-flat {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 75%;
-  width: 60%;
+  height: 80%;
+  width: 40%;
   border-radius: 45px;
   color: white;
   font-size: 90px;
   text-decoration: none;
   text-align: center;
-  background-image: url('marvel-favorites.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.95;
   font-family: 'Anton', sans-serif;
   text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
   flex-shrink: 3;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#log-to-fav {
+  background-image: url('marvel-favorites.jpg');
+
+}
+#game-pic {
+  background-image: url('favorites-deadpool.jpg');
 }

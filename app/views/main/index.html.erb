@@ -28,12 +28,13 @@
             <% else %>
               <a href="/login" id="log-to-fav" class="button-flat"><div>FAVORITES</div></a>
             <% end %>
-            <% if flash[:notice]%>
-              <div class="desc"><%= flash[:notice] %></div>
-            <% elsif !(current_user) %>
-              <div class="desc">Sign In Required For Favorites</div>
-            <% end %>
+            <a href="/game" id="game-pic" class="button-flat"><div>GAME</div></a>
           </article>
+          <% if flash[:notice]%>
+          <div class="desc"><%= flash[:notice] %></div>
+          <% elsif !(current_user) %>
+          <div class="desc">Sign In Required For Favorites</div>
+          <% end %>
         </section>
       </article>
     </section>
