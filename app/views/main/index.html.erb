@@ -33,7 +33,7 @@
           <% if flash[:notice]%>
           <div class="desc"><%= flash[:notice] %></div>
           <% elsif !(current_user) %>
-          <div class="desc">Sign In Required For Favorites</div>
+          <div class="desc"><a class="log-link" href="/login">Sign In</a> Required For Favorites</div>
           <% end %>
         </section>
       </article>
