@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :series, only: [:index, :show]
   resources :favorites, only: [:index, :create]
   resources :users, only: [:new, :create]
+  resources :game, only: :index
 
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"
