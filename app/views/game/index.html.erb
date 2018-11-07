@@ -1,0 +1,165 @@
+<header class="title-banner">
+    <div class="title">MATCHING GAME</div>
+
+</header>
+<section class="middle-banner h-auto">
+  <%= render partial: "layouts/nav" %>
+  <article class="mid-fav mt-15">
+    <section class="instruct-box">
+      <div class="inner-instruct">
+        <div class="inner-face">
+          <div class="card-title">
+            INSTRUCTIONS
+          </div>
+          <ul class="card-desc">
+            <li>Click on a card to turn it over and reveal a marvel character</li>
+            <li>You can only turn over two cards at a time</li>
+            <li>When two photos match. They will stay revealed.</li>
+            <li>If you reveal all of the cards you win!</li>
+            <li>At the end of a game the cards are flipped back over and shuffled</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="memory-game">
+      <div class="memory-card" data-character="hulk">
+        <img class="front-face" src="https://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0/portrait_xlarge.jpg" alt="hulk" />
+        <img class="back-face" src="assets/marvel-card.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-character="spiderman">
+        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b/portrait_xlarge.jpg" alt="spiderman" />
+        <img class="back-face" src="assets/marvel-card.png" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-character="captain-america">
+        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087/portrait_xlarge.jpg" alt="captain-america" />
+        <img class="back-face" src="assets/marvel-card.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-character="thor">
+        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350/portrait_xlarge.jpg" alt="thor" />
+        <img class="back-face" src="assets/marvel-card.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-character="iron-man">
+        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55/portrait_xlarge.jpg" alt="iron-man" />
+        <img class="back-face" src="assets/marvel-card.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-character="wolverine">
+        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf/portrait_xlarge.jpg" alt="wolverine" />
+        <img class="back-face" src="assets/marvel-card.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-character="hulk">
+        <img class="front-face" src="https://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0/portrait_xlarge.jpg" alt="hulk" />
+        <img class="back-face" src="assets/marvel-card.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-character="spiderman">
+        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b/portrait_xlarge.jpg" alt="spiderman" />
+        <img class="back-face" src="assets/marvel-card.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-character="captain-america">
+        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087/portrait_xlarge.jpg" alt="captain-america" />
+        <img class="back-face" src="assets/marvel-card.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-character="thor">
+        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350/portrait_xlarge.jpg" alt="thor" />
+        <img class="back-face" src="assets/marvel-card.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-character="iron-man">
+        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55/portrait_xlarge.jpg" alt="iron-man" />
+        <img class="back-face" src="assets/marvel-card.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-character="wolverine">
+        <img class="front-face" src="http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf/portrait_xlarge.jpg" alt="wolverine" />
+        <img class="back-face" src="assets/marvel-card.png" alt="JS Badge" />
+      </div>
+    </section>
+  </article>
+</section>
+  <script type="text/javascript">
+    const cards = document.querySelectorAll('.memory-card')
+    shuffle()
+
+    let hasFlippedCard = false;
+    let firstCard, secondCard;
+    let lockBoard = false;
+    let matchCount = 0;
+
+    function flipCard(){
+      if (lockBoard) return;
+      if (this === firstCard) return;
+      this.classList.add('flip')
+
+      if(!hasFlippedCard){
+        hasFlippedCard = true;
+        firstCard = this;
+        return
+      }
+
+      hasFlippedCard = false;
+      secondCard = this;
+
+      checkForMatch();
+    }
+
+    function checkForMatch(){
+      if(firstCard.dataset.character === secondCard.dataset.character){
+        disableCards()
+      } else {
+        unflipCards()
+      }
+
+      if(matchCount === 6){
+        resetGame();
+      }
+    }
+
+    function disableCards(){
+      matchCount += 1
+      firstCard.removeEventListener('click', flipCard)
+      secondCard.removeEventListener('click', flipCard)
+    }
+
+    function unflipCards(){
+      lockBoard = true;
+      setTimeout(()=>{
+        firstCard.classList.remove('flip')
+        secondCard.classList.remove('flip')
+        resetBoard();
+      }, 1500)
+    }
+
+    function resetGame(){
+      lockboard = true;
+      matchCount = 0;
+      setTimeout(()=>{
+        unflipAll()
+      }, 1000)
+      setTimeout(()=>{
+        shuffle()
+      }, 1200)
+      resetBoard()
+    }
+
+    function unflipAll(){
+      cards.forEach((card) => {
+        card.classList.remove('flip')
+        card.addEventListener('click', flipCard)
+      })
+    }
+
+    function resetBoard() {
+      hasFlippedCard = false;
+      lockBoard = false;
+      firstCard = null;
+      secondCard = null;
+    }
+
+    function shuffle(){
+      cards.forEach(card => {
+        let randomPos = Math.floor(Math.random() * 12)
+        card.style.order = randomPos;
+      })
+    }
+
+    cards.forEach(card => card.addEventListener('click', flipCard))
+  </script>
+</body>
