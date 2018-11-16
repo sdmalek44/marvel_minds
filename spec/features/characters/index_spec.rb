@@ -23,7 +23,7 @@ describe '/characters' do
 
       expect(page).to have_content('Name: Hulk')
       expect(page).to have_content("Description: #{desc}")
-      expect(page).to have_content("Series: 419")
+      expect(page).to have_content("Series: 420")
       expect(page).to have_content("Events: 25")
     end
     it 'can click on a character and go to show page' do

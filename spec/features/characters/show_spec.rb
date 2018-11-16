@@ -10,7 +10,7 @@ describe '/characters/:id' do
       expect(page).to have_content("CHARACTER PROFILE")
       expect(page).to have_content("Hulk")
       expect(page).to have_content("Description: #{desc}")
-      expect(page).to have_content("Series: 419")
+      expect(page).to have_content("Series: 420")
       expect(page).to have_content("Events: 25")
     end
     it 'can see all events for character' do
