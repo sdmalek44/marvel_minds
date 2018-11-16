@@ -1,7 +1,7 @@
 # :city_sunset: **MARVEL MINDS**
 
 ## About
-  - Marvel Minds is a web application to help children 12 and under learn about Marvel characters, Marvel series, and keep a list of their favorites. It also includes a matching card memory game where a user tries to remember what faces lie behind each card. The project was developed using Ruby 2.4.3, Rails 5.2.1. and JavaScript. See it live [HERE](https://marvel-minds.herokuapp.com).  
+Marvel Minds is a web application to help children 12 and under learn about Marvel characters, Marvel series, and keep a list of their favorites. It also includes a matching card memory game where a user tries to remember what faces lie behind each card. The project was developed using Ruby 2.4.3, Rails 5.2.1. and JavaScript. See it live [HERE](https://marvel-minds.herokuapp.com).  
 
 
 ## Pages
