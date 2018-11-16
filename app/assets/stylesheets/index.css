@@ -23,16 +23,16 @@
 }
 
 .mid-sec {
-  width:50%;
+  width: 50%;
 }
 
 .right-sec {
-  width:25%;
+  width: 25%;
 }
 
 .calculator {
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   background-color: rgb(73, 75, 91);
   width: 80%;
   height: 99%;
@@ -89,14 +89,17 @@
   color: white;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding: 5px;
+  text-align: center;
 }
 
 .result-title {
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-
+  padding: 5px;
+  text-align: center;
   font-size: 30px;
   color: white;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   width: 80%;
   height: 100%;
   display: flex;
@@ -138,7 +141,7 @@
 .hero-card-right {
   width: 98%;
   color: rgb(206, 206, 206);
-  font-family: 'Special Elite', cursive;
+  font-family: "Special Elite", cursive;
   font-size: 18px;
   display: flex;
   flex-direction: column;
@@ -158,22 +161,60 @@
 
 .list {
   color: white;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-size: 25px;
-  width: 85%;
+  width: 80%;
   height: 90%;
+  padding: 20px;
+
   background-color: rgb(73, 75, 91);
   padding-top: 20px;
   border-radius: 15px;
   box-shadow: 2px 2px 2px 2px black;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
 
+.list-title {
+  text-align: center;
 }
 
 .item {
   margin-left: 15px;
 }
 
-.list-title {
+@media only screen and (max-width: 1200px) {
+  .result-title {
+    font-size: 18px;
+  }
+  .calc-title {
+    font-size: 18px;
+  }
+  .list-title {
+    font-size: 18px;
+  }
+  .item {
+    font-size: 15px;
+    height: auto;
+  }
 
+  .list {
+    width: 70%;
+  }
+
+  .calc-letter {
+    font-size: 10px;
+    width: 5%;
+    height: 5%;
+  }
+
+  .calc-input {
+    font-size: 10px;
+  }
+
+  .hero-card-right {
+    font-size: 10px;
+  }
+  .hero-card img {
+    width: 40%;
+  }
 }
