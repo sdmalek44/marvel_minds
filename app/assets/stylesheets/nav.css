@@ -56,6 +56,13 @@
 
 @media only screen and (max-width: 1200px) {
   .nav-items {
-    font-size: 10px;
+    font-size: 15px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav-items {
+    font-size: 5px;
   }
 }

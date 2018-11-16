@@ -19,7 +19,6 @@
   width: 25%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .mid-sec {
@@ -230,16 +229,24 @@
   }
   .list {
     width: 40%;
-    height: auto;
+    height: 40%;
   }
   .calc-letter {
-    font-size: 10px;
-    width: 5%;
-    height: 5%;
+    font-size: 5px;
+    width: 2%;
+    height: 2%;
+    margin-left: 2px;
+    margin-bottom: 2px;
   }
   .calc-input {
-    font-size: 10px;
+    font-size: 8px;
+    height: 10px;
   }
+
+  .calculator {
+    height: 50%;
+  }
+
   .hero-card-right {
     font-size: 10px;
   }
@@ -259,5 +266,9 @@
 
   .sm-desc {
     font-size: 5px;
+  }
+
+  .sub-button {
+    height: 20px;
   }
 }

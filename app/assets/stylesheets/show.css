@@ -247,8 +247,14 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .directions {
+    justify-content: center;
+    align-items: flex-start;
+  }
   .dir-text {
-    font-size: 12px;
+    font-size: 10px;
+    text-align: center;
+    padding-left: 13px;
   }
   .result-title {
     font-size: 10px;
