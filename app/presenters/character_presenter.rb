@@ -6,7 +6,6 @@ class CharacterPresenter
   end
 
   def search_results
-    return [] if @query.empty?
     service.search_characters(@query).map { |data| Character.new(data) }
   end
 
