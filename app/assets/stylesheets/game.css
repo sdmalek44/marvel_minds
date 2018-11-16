@@ -30,7 +30,7 @@
   margin: 5px;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
 
 .front-face,
@@ -62,17 +62,16 @@
   border-radius: 5px;
   border: 2px solid red;
   background-color: rgb(188, 27, 18);
-  transform: rotateY(180deg)
+  transform: rotateY(180deg);
 }
 
 .memory-card:active {
-
-  transform: scale(.97);
-  transition: transform .2s;
+  transform: scale(0.97);
+  transition: transform 0.2s;
 }
 
 .memory-card.flip {
-  transform: rotateY(180deg)
+  transform: rotateY(180deg);
 }
 
 .instruct-box {
@@ -82,14 +81,13 @@
   width: 600px;
   height: 640px;
   display: flex;
-
 }
 
 .inner-instruct {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  margin:auto;
+  margin: auto;
   width: 90%;
   height: 96%;
   border: 2px solid blue;
@@ -104,19 +102,18 @@
   box-sizing: border-box;
   background-color: rgb(132, 16, 10);
 
-  margin:auto;
+  margin: auto;
   width: 90%;
   height: 70%;
   border: 2px solid red;
   border-radius: 10px;
-  color:white;
-  font-family: 'Special Elite', cursive;
+  color: white;
+  font-family: "Special Elite", cursive;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-
 }
 
 .card-desc {
@@ -141,4 +138,55 @@
   font-size: 40px;
   width: 80%;
   margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .instruct-box {
+    width: 230px;
+    height: 90%;
+  }
+  .card-title {
+    font-size: 17px;
+  }
+  .card-desc {
+    font-size: 10px;
+  }
+  .inner-face {
+    height: 90%;
+  }
+
+  .memory-game {
+    height: 500px;
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .instruct-box {
+    width: 320px;
+    height: 120px;
+  }
+  .inner-face {
+    height: 100px;
+    width: 200px;
+    padding: 5px;
+  }
+  .card-title {
+    font-size: 7px;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  .card-desc {
+    font-size: 4px;
+    margin: 0;
+  }
+  .memory-game {
+    height: 300px;
+    width: 300px;
+  }
+  .mid-fav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
