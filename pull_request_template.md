@@ -1,18 +1,22 @@
-____ Wrote Tests
-____ Implemented
-____ Reviewed
-# Neccesary checkmarks:
+\_**\_ Wrote Tests
+\_\_** Implemented
+\_\_\_\_ Reviewed
+
+# Necessary checkmarks:
+
 - [] All Tests are Passing
 
 - [] The code will run locally
 
 ## Type of change
+
 - [] New feature
 - [] Bug Fix
 
 # Implements/Fixes:
-* description
-closes #
+
+- description
+  closes #
 
 # Check the correct boxes
 
@@ -21,6 +25,7 @@ closes #
 - [] This broke everything
 
 # Testing Changes
+
 - [] No Tests have been changed
 - [] Some Tests have been changed
 - [] All of the Tests have been changed(Please describe what in the world happened)
