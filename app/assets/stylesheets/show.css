@@ -15,15 +15,17 @@
 .sub-cat-title {
   width: 60%;
   height: 100%;
+  padding: 10px;
 }
 
 .sub-cat-small {
   width: 95%;
   height: 100%;
+  padding: 10px;
 }
 
 .height-15 {
-  height: 8%;
+  height: 10%;
 }
 
 .flex-c {
@@ -38,8 +40,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:rgb(0, 14, 38);
-  margin-bottom: 60px;
+  background-color: rgb(0, 14, 38);
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 .profile-pic {
@@ -49,7 +52,7 @@
 }
 
 .attr-box {
-  font-family: 'Special Elite', cursive;
+  font-family: "Special Elite", cursive;
   width: 80%;
   height: auto;
   display: flex;
@@ -62,7 +65,7 @@
 }
 
 .char-name {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-size: 35px;
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
@@ -88,10 +91,10 @@
   display: flex;
   border-radius: 15px;
   width: 100%;
-  font-family: 'Special Elite', cursive;
+  font-family: "Special Elite", cursive;
   color: white;
   background-color: black;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 #char-event-box {
@@ -110,8 +113,8 @@
 }
 
 .sub-hero-img {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
 }
 
 .sub-side-car {
@@ -119,14 +122,10 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 15px;
-
 }
 
 .sub-title {
   margin-bottom: 10px;
-}
-
-.pad-0 {
 }
 
 .img-shrink {
@@ -154,7 +153,7 @@
   width: 100%;
   height: 50%;
   font-size: 40px;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   color: white;
   text-align: center;
   margin-right: 25px;
@@ -169,7 +168,7 @@
 }
 
 .w-90 {
-  width: 90%;
+  width: 80%;
 }
 
 .red-b {
@@ -193,4 +192,56 @@
 .it {
   display: flex;
   flex-wrap: wrap;
+}
+
+.small-desc {
+  font-size: 10px;
+}
+
+@media only screen and (max-width: 1550px) {
+  .dir-text {
+    font-size: 20px;
+  }
+
+  .attr-box {
+    font-size: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .char-name {
+    font-size: 20px;
+  }
+
+  .result-title {
+    font-size: 15px;
+  }
+
+  .sub-cat-small {
+    font-size: 15px;
+  }
+
+  .sub-cat-title {
+    font-size: 15px;
+  }
+
+  .sub-side-car {
+    font-size: 7px;
+  }
+
+  .small-desc {
+    font-size: 7px;
+  }
+
+  .title-bigger {
+    font-size: 10px;
+  }
+
+  .sub-hero-img {
+    width: 40%;
+  }
+
+  .sub-cat-hero-card {
+    height: 130px;
+  }
 }
