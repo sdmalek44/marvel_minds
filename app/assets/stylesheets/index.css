@@ -30,7 +30,6 @@
 }
 
 .calculator {
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   font-family: "Merriweather Sans", sans-serif;
   background-color: rgb(73, 75, 91);
   width: 80%;
@@ -93,7 +92,6 @@
 }
 
 .result-title {
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   padding: 5px;
   text-align: center;
   font-size: 30px;
@@ -169,7 +167,6 @@
   padding-top: 20px;
   border-radius: 15px;
   box-shadow: 2px 2px 2px 2px black;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 .list-title {
