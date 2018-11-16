@@ -7,7 +7,7 @@
 }
 
 .inner-nav {
-  height: 100%;
+  height: 60px;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -15,13 +15,13 @@
 
 .nav-items {
   border: 3px solid white;
-  height: 100%;
+  height: 60px;
   display: inline-flex;
   width: 200px;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   color: white;
   font-size: 20px;
 }
@@ -52,4 +52,10 @@
 
 .time {
   border: 2px solid rgb(18, 231, 114);
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav-items {
+    font-size: 10px;
+  }
 }
