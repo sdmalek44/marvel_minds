@@ -1,22 +1,19 @@
 class MarvelService
 
   def search_characters(query)
-    @characters ||= get_json("/v1/public/characters?nameStartsWith=#{query}&ts=1&apikey=1d68fdb48109bd44fd202dd9c0df3866&hash=108c35713f83d455e1a871dd3858751d")
+    @chars ||= get_json("/v1/public/characters?nameStartsWith=#{query}&ts=1&apikey=1d68fdb48109bd44fd202dd9c0df3866&hash=108c35713f83d455e1a871dd3858751d")
   end
 
-  def character_data(character_id)
-    data = get_json("/v1/public/characters/#{character_id}?ts=1&apikey=1d68fdb48109bd44fd202dd9c0df3866&hash=108c35713f83d455e1a871dd3858751d")[0]
-    @character_data ||= data
+  def char_data(character_id)
+    @char_data ||= get_json("/v1/public/characters/#{character_id}?ts=1&apikey=1d68fdb48109bd44fd202dd9c0df3866&hash=108c35713f83d455e1a871dd3858751d")[0]
   end
 
-  def character_series_data(character_id)
-    data = get_json("/v1/public/characters/#{character_id}/series?ts=1&apikey=1d68fdb48109bd44fd202dd9c0df3866&hash=108c35713f83d455e1a871dd3858751d")
-    @character_series ||= data
+  def char_series_data(character_id)
+    @char_series ||= get_json("/v1/public/characters/#{character_id}/series?ts=1&apikey=1d68fdb48109bd44fd202dd9c0df3866&hash=108c35713f83d455e1a871dd3858751d")
   end
 
-  def character_events_data(character_id)
-    data = get_json("/v1/public/characters/#{character_id}/events?ts=1&apikey=1d68fdb48109bd44fd202dd9c0df3866&hash=108c35713f83d455e1a871dd3858751d")
-    @character_events ||= data
+  def char_events_data(character_id)
+    @char_events ||= get_json("/v1/public/characters/#{character_id}/events?ts=1&apikey=1d68fdb48109bd44fd202dd9c0df3866&hash=108c35713f83d455e1a871dd3858751d")
   end
 
   def get_json(url)

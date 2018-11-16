@@ -18,4 +18,5 @@ module CharacterSearchText
   def search_placeholder
     "CHARACTER NAME"
   end
+  
 end
