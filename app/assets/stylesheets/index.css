@@ -166,7 +166,6 @@
   width: 80%;
   height: 90%;
   padding: 20px;
-
   background-color: rgb(73, 75, 91);
   padding-top: 20px;
   border-radius: 15px;
@@ -196,25 +195,69 @@
     font-size: 15px;
     height: auto;
   }
-
   .list {
     width: 70%;
   }
-
   .calc-letter {
     font-size: 10px;
     width: 5%;
     height: 5%;
   }
-
   .calc-input {
     font-size: 10px;
   }
-
   .hero-card-right {
     font-size: 10px;
   }
   .hero-card img {
     width: 40%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .result-title {
+    font-size: 10px;
+  }
+  .calc-title {
+    font-size: 10px;
+  }
+  .list-title {
+    font-size: 10px;
+  }
+  .item {
+    font-size: 7px;
+    height: auto;
+  }
+  .list {
+    width: 40%;
+    height: auto;
+  }
+  .calc-letter {
+    font-size: 10px;
+    width: 5%;
+    height: 5%;
+  }
+  .calc-input {
+    font-size: 10px;
+  }
+  .hero-card-right {
+    font-size: 10px;
+  }
+  .hero-card img {
+    width: 40%;
+  }
+
+  .hero-card {
+    height: 120px;
+    width: 80%;
+    margin-left: 10px;
+  }
+
+  .hero-name {
+    font-size: 7px;
+  }
+
+  .sm-desc {
+    font-size: 5px;
   }
 }

@@ -1,7 +1,7 @@
 <% @presenter.search_results.each do |result| %>
   <a class="hero-card" href="/series/<%= result.id %>">
     <img src="<%= result.thumbnail %>" alt="" class="thumb-img">
-    <aside class="hero-card-right">
+    <aside class="hero-card-right sm-desc">
       <div><span class="ul">Title</span>: <span class="hero-name"><%= result.title %></span></div>
       <div><span class="ul">Start Year</span>: <%= result.start_year %></div>
       <div><span class="ul">End Year</span>: <%= result.end_year %></div>
