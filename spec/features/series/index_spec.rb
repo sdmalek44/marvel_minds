@@ -15,7 +15,7 @@ describe '/series' do
       end
     end
     it 'can search by input field' do
-      VCR.use_cassette('series') do
+      VCR.use_cassette('series_1') do
         visit '/series'
 
         fill_in 'cal-input', with: 'X-23'
@@ -29,7 +29,7 @@ describe '/series' do
       end
     end
     it 'can click on a character and go to show page' do
-      VCR.use_cassette('series_1') do
+      VCR.use_cassette('series_2') do
         visit '/series'
 
         fill_in 'cal-input', with: 'X-Men'
