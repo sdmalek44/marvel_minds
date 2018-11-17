@@ -1,5 +1,9 @@
 class MarvelService
 
+  def search_series(query)
+    @series ||= get_json("/v1/public/series?titleStartsWith=#{query}&orderBy=startYear&ts=1&apikey=1d68fdb48109bd44fd202dd9c0df3866&hash=108c35713f83d455e1a871dd3858751d")
+  end
+
   def search_characters(query)
     @chars ||= get_json("/v1/public/characters?nameStartsWith=#{query}&ts=1&apikey=1d68fdb48109bd44fd202dd9c0df3866&hash=108c35713f83d455e1a871dd3858751d")
   end
