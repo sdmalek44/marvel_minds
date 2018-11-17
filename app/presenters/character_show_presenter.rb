@@ -22,4 +22,5 @@ class CharacterShowPresenter
   def service
     @service ||= MarvelService.new
   end
+  
 end

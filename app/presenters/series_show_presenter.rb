@@ -1,20 +1,8 @@
 class SeriesShowPresenter
+  include SeriesShowText
 
   def initialize(series_id)
     @series_id = series_id
-  end
-
-
-  def title
-    "SERIES PROFILE"
-  end
-
-  def relation_1
-    "SERIES CHARACTERS"
-  end
-
-  def relation_2
-    "SERIES EVENTS"
   end
 
   def series
@@ -34,4 +22,5 @@ class SeriesShowPresenter
   def service
     @service ||= MarvelService.new
   end
+  
 end

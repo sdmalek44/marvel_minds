@@ -9,7 +9,10 @@ class SeriesPresenter
     @results ||= service.search_series(@query).map { |data| Series.new(data) }
   end
 
+  private
+
   def service
     @service ||= MarvelService.new
   end
+  
 end
