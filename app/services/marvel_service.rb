@@ -37,6 +37,8 @@ class MarvelService
     data[:code] == 200 ? data[:data][:results] : []
   end
 
+  private
+
   def conn
     @conn ||= Faraday.new('http://gateway.marvel.com') do |faraday|
       faraday.adapter Faraday.default_adapter
