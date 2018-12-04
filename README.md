@@ -1,4 +1,5 @@
 # :city_sunset: **MARVEL MINDS**  
+[![Build Status](https://travis-ci.com/sdmalek44/marvel_minds.svg?branch=master)](https://travis-ci.com/sdmalek44/marvel_minds)
 [![Maintainability](https://api.codeclimate.com/v1/badges/13f8e7eb34a1d927297c/maintainability)](https://codeclimate.com/github/sdmalek44/marvel_minds/maintainability)
 
 ## About
