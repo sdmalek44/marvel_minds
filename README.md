@@ -1,4 +1,6 @@
-# :city_sunset: **MARVEL MINDS**
+# :city_sunset: **MARVEL MINDS**  
+[![Build Status](https://travis-ci.com/sdmalek44/marvel_minds.svg?branch=master)](https://travis-ci.com/sdmalek44/marvel_minds)
+[![Maintainability](https://api.codeclimate.com/v1/badges/13f8e7eb34a1d927297c/maintainability)](https://codeclimate.com/github/sdmalek44/marvel_minds/maintainability)
 
 ## About
 Marvel Minds is a web application to help children 12 and under learn about Marvel characters, Marvel series, and keep a list of their favorites. It also includes a matching card memory game where a user tries to remember what faces lie behind each card. The project was developed using Ruby 2.4.3, Rails 5.2.1. and JavaScript. See it live [HERE](https://marvel-minds.herokuapp.com).  
